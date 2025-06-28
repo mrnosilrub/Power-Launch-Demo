@@ -13,5 +13,17 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   const links = document.querySelectorAll('#mobileMenu a');
   links.forEach(l => l.addEventListener('click', toggleMenu));
+
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const success = document.getElementById('successMessage');
+      if (success) {
+        success.classList.remove('hidden');
+      }
+      form.reset();
+    });
+  }
 });
 
