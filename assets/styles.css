@@ -69,9 +69,51 @@ body {
 .bg-brand-charcoal { background-color: var(--color-headlines) !important; }
 .border-brand-steel { border-color: var(--color-success) !important; }
 
+
 /* Ensure navbar stays sticky even if Tailwind fails to load */
 header.sticky {
   position: sticky;
   top: 0;
   z-index: 50; /* match z-50 utility */
+
+/* Nav bar underline animation */
+header nav a,
+#mobileMenu a:not(.bg-yellow-500) {
+  position: relative;
+  text-decoration: none;
+}
+
+header nav a:hover,
+#mobileMenu a:not(.bg-yellow-500):hover {
+  color: inherit !important; /* remove hover color change */
+}
+
+header nav a::after,
+#mobileMenu a:not(.bg-yellow-500)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-links);
+  transition: width 0.3s ease;
+}
+
+header nav a:hover::after,
+#mobileMenu a:not(.bg-yellow-500):hover::after {
+  width: 100%;
+
+/* Animated background for the stats section */
+.stats-gradient {
+  background: linear-gradient(-45deg, #D75E02, #FFA726, #FF6A00, #D75E02);
+  background-size: 600% 600%;
+  animation: stats-gradient-animation 10s ease infinite;
+}
+
+@keyframes stats-gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+
 }
