@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       form.reset();
     });
+  }
 
   const accordions = document.querySelectorAll('details');
   accordions.forEach(d => {
