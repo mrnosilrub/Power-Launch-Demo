@@ -6,7 +6,7 @@ function toggleMenu() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+function initMenu() {
   const btn = document.getElementById('menuButton');
   const closeBtn = document.getElementById('closeMenu');
   if (btn) {
@@ -73,5 +73,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     counters.forEach(el => observer.observe(el));
   }
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initMenu);
+} else {
+  initMenu();
+}
 
