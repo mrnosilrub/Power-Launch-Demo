@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
 
@@ -62,3 +62,12 @@ body {
 .to-red-700 { --tw-gradient-to: var(--color-success) var(--tw-gradient-to-position); }
 
 .bg-green-700 { background-color: var(--color-success) !important; }
+
+/* Brand utility classes mirroring ScrapyardSites.com */
+.text-brand-orange { color: var(--color-links) !important; }
+.bg-brand-orange { background-color: var(--color-links) !important; }
+.text-brand-steel { color: var(--color-success) !important; }
+.bg-brand-steel { background-color: var(--color-success) !important; }
+.text-brand-charcoal { color: var(--color-headlines) !important; }
+.bg-brand-charcoal { background-color: var(--color-headlines) !important; }
+.border-brand-steel { border-color: var(--color-success) !important; }
