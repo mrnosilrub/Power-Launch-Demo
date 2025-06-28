@@ -1,50 +1,63 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
 
+:root {
+  --color-body: #FBFCFD;      /* Platinum 50 */
+  --color-cards: #EDF1F5;     /* Nickel 150 */
+  --color-headlines: #1E2935; /* Lead 900 */
+  --color-links: #5B8DB8;     /* Titanium 500 */
+  --color-success: #7ABD63;   /* Lime Zinc 400 */
+}
+
 body {
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
+
 .card {
-  border: 2px solid #5B8DB8;
+  border: 2px solid var(--color-links);
   border-radius: 0.5rem; /* match rounded-lg */
 }
 
 /* Special styling for the yellow Power‑Launch pricing card */
 .power-launch-card {
-  border-color: #1E2935; /* dark slate to stand out against light background */
+  border-color: var(--color-headlines); /* dark slate to stand out against light background */
 }
 
 .navbar-border {
-  border-bottom: 2px solid #5B8DB8;
+  border-bottom: 2px solid var(--color-links);
 }
 
 /* Color scheme overrides */
 body {
-  background-color: #FBFCFD;
-  color: #1E2935;
+  background-color: var(--color-body);
+  color: var(--color-headlines);
 }
 
-.bg-gray-900 { background-color: #1E2935 !important; }
-.bg-gray-800 { background-color: #1E2935 !important; }
-.bg-gray-700 { background-color: #EDF1F5 !important; }
+.bg-gray-900 { background-color: var(--color-headlines) !important; }
+.bg-gray-800 { background-color: var(--color-headlines) !important; }
+.bg-gray-700 { background-color: var(--color-cards) !important; }
 
-.border-gray-700 { border-color: #EDF1F5 !important; }
+.border-gray-700 { border-color: var(--color-cards) !important; }
 
 .text-gray-100,
 .text-gray-300,
-.text-gray-400 { color: #1E2935 !important; }
-.text-gray-900 { color: #FBFCFD !important; }
+.text-gray-400 { color: var(--color-headlines) !important; }
+.text-gray-900,
+.text-white { color: var(--color-body) !important; }
+.hover\:text-white:hover { color: var(--color-body) !important; }
 
-.bg-yellow-500 { background-color: #5B8DB8 !important; }
+.bg-yellow-500 { background-color: var(--color-links) !important; }
 .text-yellow-400,
-.text-yellow-500 { color: #5B8DB8 !important; }
+.text-yellow-500 { color: var(--color-links) !important; }
 
-.hover\:text-yellow-400:hover { color: #7ABD63 !important; }
+.hover\:text-yellow-400:hover { color: var(--color-success) !important; }
 .hover\:bg-yellow-600:hover,
-.hover\:bg-gray-800:hover { background-color: #1E2935 !important; }
+.hover\:bg-gray-800:hover { background-color: var(--color-headlines) !important; }
 
-.focus\:ring-yellow-500:focus { --tw-ring-color: #5B8DB8 !important; }
+.focus\:ring-yellow-500:focus { --tw-ring-color: var(--color-links) !important; }
 
-.from-yellow-500 { --tw-gradient-from: #5B8DB8 var(--tw-gradient-from-position); }
-.to-orange-600 { --tw-gradient-to: #5B8DB8 var(--tw-gradient-to-position); }
+.from-yellow-500 { --tw-gradient-from: var(--color-links) var(--tw-gradient-from-position); }
+.to-orange-600 { --tw-gradient-to: var(--color-links) var(--tw-gradient-to-position); }
+
+.bg-green-700 { background-color: var(--color-success) !important; }
