@@ -8,8 +8,12 @@ function toggleMenu() {
 
 document.addEventListener('DOMContentLoaded', function () {
   const btn = document.getElementById('menuButton');
+  const closeBtn = document.getElementById('closeMenu');
   if (btn) {
     btn.addEventListener('click', toggleMenu);
+  }
+  if (closeBtn) {
+    closeBtn.addEventListener('click', toggleMenu);
   }
   const links = document.querySelectorAll('#mobileMenu a');
   links.forEach(l => l.addEventListener('click', toggleMenu));
