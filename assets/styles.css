@@ -1,16 +1,16 @@
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
+/* Simple system fonts for a lighter footprint */
 
 :root {
-  --color-body: #FBFCFD;      /* Platinum 50 */
-  --color-cards: #EDF1F5;     /* Nickel 150 */
-  --color-headlines: #1E2935; /* Lead 900 */
-  --color-links: #5B8DB8;     /* Titanium 500 */
-  --color-success: #7ABD63;   /* Lime Zinc 400 */
+  --color-body: #FFFFFF;      /* base white */
+  --color-cards: #F5F5F5;     /* light gray for alternating sections */
+  --color-headlines: #000000; /* black text */
+  --color-links: #FF0000;     /* bright red accent */
+  --color-success: #B00000;   /* darker red for gradients/hovers */
 }
 
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 
@@ -57,7 +57,7 @@ body {
 
 .focus\:ring-yellow-500:focus { --tw-ring-color: var(--color-links) !important; }
 
-.from-yellow-500 { --tw-gradient-from: var(--color-links) var(--tw-gradient-from-position); }
-.to-orange-600 { --tw-gradient-to: var(--color-links) var(--tw-gradient-to-position); }
+.from-red-500 { --tw-gradient-from: var(--color-links) var(--tw-gradient-from-position); }
+.to-red-700 { --tw-gradient-to: var(--color-success) var(--tw-gradient-to-position); }
 
 .bg-green-700 { background-color: var(--color-success) !important; }
