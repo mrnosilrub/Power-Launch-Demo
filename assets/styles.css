@@ -1,3 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
 .card {
   border: 2px solid #f59e0b;
   border-radius: 0.5rem; /* match rounded-lg */
