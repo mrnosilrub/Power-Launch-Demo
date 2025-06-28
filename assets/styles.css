@@ -6,4 +6,7 @@
 /* Special styling for the yellow Power‑Launch pricing card */
 .power-launch-card {
   border-color: #111827; /* dark gray to stand out against yellow background */
+  
+.navbar-border {
+  border-bottom: 2px solid #f59e0b;
 }
