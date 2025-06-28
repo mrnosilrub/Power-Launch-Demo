@@ -1,0 +1,4 @@
+.card {
+  border: 2px solid #f59e0b;
+  border-radius: 0.5rem; /* match rounded-lg */
+}

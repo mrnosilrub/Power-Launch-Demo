@@ -5,6 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About | Demo Yard</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="assets/styles.css">
+<meta name="description" content="Learn about Demo Yard's commitment to fair pricing, quick turnarounds, and exceptional service.">
+<meta property="og:title" content="About | Demo Yard">
+<meta property="og:description" content="Learn about Demo Yard's commitment to fair pricing, quick turnarounds, and exceptional service.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.demoyard.com/about.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1507967000381-287232a08ffb?auto=format&fit=crop&w=1200&q=80">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Demo Yard",
+  "description": "Scrap metal recycling services in the Metropolis area.",
+  "url": "https://www.demoyard.com",
+  "telephone": "+1-555-0100",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1234 Industrial Dr.",
+    "addressLocality": "Metropolis",
+    "addressRegion": "TX",
+    "postalCode": "77000",
+    "addressCountry": "US"
+  }
+}
+</script>
 </head>
 <body class="min-h-screen flex flex-col bg-gray-900 text-gray-100">
 <header class="bg-gray-800 sticky top-0 w-full z-50">
@@ -13,6 +38,7 @@
     <nav class="space-x-6 hidden md:block">
       <a href="index.html" class="text-sm font-medium text-gray-300 hover:text-white">Home</a><a href="services.html" class="text-sm font-medium text-gray-300 hover:text-white">Services</a><a href="locations.html" class="text-sm font-medium text-gray-300 hover:text-white">Locations</a><a href="pricing.html" class="text-sm font-medium text-gray-300 hover:text-white">Pricing</a><a href="about.html" class="text-sm font-medium text-yellow-400">About</a><a href="process.html" class="text-sm font-medium text-gray-300 hover:text-white">Process</a><a href="faq.html" class="text-sm font-medium text-gray-300 hover:text-white">FAQ</a><a href="contact.html" class="text-sm font-medium text-gray-300 hover:text-white">Contact</a>
     </nav>
+    <a href="contact.html" class="md:hidden inline-block bg-yellow-500 text-gray-900 px-4 py-2 rounded-full ml-auto mr-3">Call Now</a>
     <button id="menuButton" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -20,6 +46,11 @@
     </button>
     </div>
     <div id="mobileMenu" class="fixed inset-0 bg-gray-900 bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-6 text-xl transform translate-x-full transition-transform duration-300 md:hidden hidden">
+      <button id="closeMenu" class="absolute top-4 right-4 text-gray-300 hover:text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
       <a href="index.html" class="hover:text-yellow-400">Home</a>
       <a href="services.html" class="hover:text-yellow-400">Services</a>
       <a href="locations.html" class="hover:text-yellow-400">Locations</a>
@@ -36,6 +67,14 @@
 
   <h1 class="text-5xl font-bold mb-8 text-center">Built on Metal, Powered by Integrity</h1>
   <p class="text-lg text-gray-300 leading-8">For more than two decades, Demo Yard has turned discarded scrap into fresh opportunity. What started as a single-torch operation has grown into a fully automated, 24-acre processing campus—yet our core promise remains unchanged: pay fair prices, handle every load with respect, and recycle responsibly.</p>
+
+  <img src="assets/yard-team.jpg" alt="The Demo Yard team" class="my-10 rounded-lg shadow-lg mx-auto">
+
+  <div class="flex items-center justify-center my-8">
+    <div class="border-t border-gray-700 flex-grow"></div>
+    <span class="mx-4 text-xl font-semibold tracking-widest">2003 &rarr; 2025</span>
+    <div class="border-t border-gray-700 flex-grow"></div>
+  </div>
 
   <h2 class="text-3xl font-semibold mt-12 mb-6 text-center">What Sets Us Apart</h2>
   <div class="space-y-6">
@@ -62,13 +101,13 @@
   <p class="text-lg text-gray-300 leading-8">Most scrap yards rely on price alone; we rely on trust. Ask the fabricators, demo crews, and industrial accounts who’ve stayed with us for years—they’ll tell you Demo Yard feels less like a vendor and more like a partner.</p>
 
   <h2 class="text-3xl font-semibold mt-12 mb-4 text-center">Want to see how a premium web presence can elevate your own yard?</h2>
-  <p class="text-lg text-gray-300 leading-8">This site was crafted by Scrapyard Sites—specialists in turning metal know-how into digital growth. If our online experience matches the service you demand on the scale deck, reach out and let’s launch yours next.</p>
+  <p class="text-lg text-gray-300 leading-8">This site was crafted by <a href="https://scrapyardsites.com" class="text-yellow-400 underline" target="_blank" rel="noopener">Scrapyard Sites</a>—specialists in turning metal know-how into digital growth. If our online experience matches the service you demand on the scale deck, reach out and let’s launch yours next.</p>
 </section>
 
 </main>
 <footer class="bg-gray-800 py-8 mt-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
-    © 2025 Demo Yard · Built by Scrapyard Sites
+    © 2025 Demo Yard · Built by <a href="https://scrapyardsites.com" class="underline" target="_blank" rel="noopener">Scrapyard Sites</a>
   </div>
 </footer>
 <script src="script.js"></script>
