@@ -25,9 +25,6 @@ body {
   border-color: var(--color-headlines); /* dark slate to stand out against light background */
 }
 
-.navbar-border {
-  border-bottom: 2px solid var(--color-links);
-}
 
 /* Color scheme overrides */
 body {
