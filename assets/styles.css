@@ -69,6 +69,11 @@ body {
 .bg-brand-charcoal { background-color: var(--color-headlines) !important; }
 .border-brand-steel { border-color: var(--color-success) !important; }
 
+/* Utility for layering mobile menu above sticky header */
+.z-60 {
+  z-index: 60;
+}
+
 
 /* Ensure navbar stays sticky even if Tailwind fails to load */
 header.sticky {
