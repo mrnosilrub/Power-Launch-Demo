@@ -6,44 +6,45 @@ body {
 }
 
 .card {
-  border: 2px solid #D97706;
+  border: 2px solid #5B8DB8;
   border-radius: 0.5rem; /* match rounded-lg */
 }
 
 /* Special styling for the yellow Power‑Launch pricing card */
 .power-launch-card {
-  border-color: #111827; /* dark gray to stand out against yellow background */
+  border-color: #1E2935; /* dark slate to stand out against light background */
 }
 
 .navbar-border {
-  border-bottom: 2px solid #D97706;
+  border-bottom: 2px solid #5B8DB8;
 }
 
 /* Color scheme overrides */
 body {
-  background-color: #0B0D0E;
-  color: #F3F4F6;
+  background-color: #FBFCFD;
+  color: #1E2935;
 }
 
-.bg-gray-900 { background-color: #0B0D0E !important; }
-.bg-gray-800 { background-color: #1F282D !important; }
-.bg-gray-700 { background-color: #2F3C44 !important; }
+.bg-gray-900 { background-color: #1E2935 !important; }
+.bg-gray-800 { background-color: #1E2935 !important; }
+.bg-gray-700 { background-color: #EDF1F5 !important; }
 
-.border-gray-700 { border-color: #2F3C44 !important; }
+.border-gray-700 { border-color: #EDF1F5 !important; }
 
 .text-gray-100,
 .text-gray-300,
-.text-gray-400 { color: #F3F4F6 !important; }
+.text-gray-400 { color: #1E2935 !important; }
+.text-gray-900 { color: #FBFCFD !important; }
 
-.bg-yellow-500 { background-color: #D97706 !important; }
+.bg-yellow-500 { background-color: #5B8DB8 !important; }
 .text-yellow-400,
-.text-yellow-500 { color: #D97706 !important; }
+.text-yellow-500 { color: #5B8DB8 !important; }
 
-.hover\:text-yellow-400:hover { color: #34D399 !important; }
+.hover\:text-yellow-400:hover { color: #7ABD63 !important; }
 .hover\:bg-yellow-600:hover,
-.hover\:bg-gray-800:hover { background-color: #2F3C44 !important; }
+.hover\:bg-gray-800:hover { background-color: #1E2935 !important; }
 
-.focus\:ring-yellow-500:focus { --tw-ring-color: #D97706 !important; }
+.focus\:ring-yellow-500:focus { --tw-ring-color: #5B8DB8 !important; }
 
-.from-yellow-500 { --tw-gradient-from: #D97706 var(--tw-gradient-from-position); }
-.to-orange-600 { --tw-gradient-to: #D97706 var(--tw-gradient-to-position); }
+.from-yellow-500 { --tw-gradient-from: #5B8DB8 var(--tw-gradient-from-position); }
+.to-orange-600 { --tw-gradient-to: #5B8DB8 var(--tw-gradient-to-position); }
