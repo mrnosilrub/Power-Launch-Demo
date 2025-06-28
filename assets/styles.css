@@ -68,3 +68,16 @@ body {
 .text-brand-charcoal { color: var(--color-headlines) !important; }
 .bg-brand-charcoal { background-color: var(--color-headlines) !important; }
 .border-brand-steel { border-color: var(--color-success) !important; }
+
+/* Animated background for the stats section */
+.stats-gradient {
+  background: linear-gradient(-45deg, #D75E02, #FFA726, #FF6A00, #D75E02);
+  background-size: 600% 600%;
+  animation: stats-gradient-animation 10s ease infinite;
+}
+
+@keyframes stats-gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
