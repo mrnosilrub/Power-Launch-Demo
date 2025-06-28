@@ -2,11 +2,12 @@
 /* Simple system fonts for a lighter footprint */
 
 :root {
-  --color-body: #FFFFFF;      /* base white */
-  --color-cards: #F5F5F5;     /* light gray for alternating sections */
-  --color-headlines: #000000; /* black text */
-  --color-links: #FF0000;     /* bright red accent */
-  --color-success: #B00000;   /* darker red for gradients/hovers */
+  /* Colors mirrored from ScrapyardSites.com */
+  --color-body: #FFFFFF;      /* white page background */
+  --color-cards: #F3F4F6;     /* light gray section background */
+  --color-headlines: #2B2B2B; /* charcoal headlines and body text */
+  --color-links: #D75E02;     /* OSHA‑orange primary accent */
+  --color-success: #5E6367;   /* muted steel for secondary accents */
 }
 
 body {
