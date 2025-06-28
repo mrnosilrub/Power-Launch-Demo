@@ -124,11 +124,15 @@
 </section>
 
 </main>
-<footer class="bg-gray-800 py-8 mt-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
-    © 2025 Demo Yard · Built by Scrapyard Sites
-  </div>
+<!-- ── Footer ──────────────────────────────────────────────── -->
+<footer class="bg-white py-8 text-center text-xs text-gray-400">
+  <p>© <span id="year"></span> Scrapyard Sites — All rights reserved.</p>
 </footer>
+
+<script>
+  /* dynamic year for footer */
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 <script src="script.js"></script>
 </body>
 </html>
