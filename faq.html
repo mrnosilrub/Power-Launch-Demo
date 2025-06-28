@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAQ | Demo Yard</title>
-<script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Demo Yard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What metals do you buy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We purchase all common ferrous and non‑ferrous metals including steel, aluminum, copper, brass, stainless, and more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get paid?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Digital or paper check same day. Large industrial accounts can be set up on ACH."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide roll‑off containers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We deliver, swap, and remove 20‑40 yd containers on flexible schedules."
+          }
+        }
+      ]
+    }
+  </script>
 </head>
 <body class="min-h-screen flex flex-col bg-gray-900 text-gray-100">
 <header class="bg-gray-800 sticky top-0 w-full z-50">
@@ -34,17 +66,17 @@
 
 <section class="max-w-4xl mx-auto px-4 py-20">
   <h1 class="text-5xl font-bold mb-12 text-center">Frequently Asked Questions</h1>
-  <div class="space-y-6">
+  <div class="space-y-6 lg:grid lg:grid-cols-2 lg:gap-6 lg:space-y-0">
     <details class="bg-gray-800 rounded-lg p-6">
-      <summary class="cursor-pointer text-lg font-medium">What metals do you buy?</summary>
+      <summary aria-expanded="false" class="cursor-pointer text-lg font-medium">What metals do you buy?</summary>
       <p class="mt-4 text-gray-400">We purchase all common ferrous and non‑ferrous metals including steel, aluminum, copper, brass, stainless, and more.</p>
     </details>
     <details class="bg-gray-800 rounded-lg p-6">
-      <summary class="cursor-pointer text-lg font-medium">How do I get paid?</summary>
+      <summary aria-expanded="false" class="cursor-pointer text-lg font-medium">How do I get paid?</summary>
       <p class="mt-4 text-gray-400">Digital or paper check same day. Large industrial accounts can be set up on ACH.</p>
     </details>
     <details class="bg-gray-800 rounded-lg p-6">
-      <summary class="cursor-pointer text-lg font-medium">Do you provide roll‑off containers?</summary>
+      <summary aria-expanded="false" class="cursor-pointer text-lg font-medium">Do you provide roll‑off containers?</summary>
       <p class="mt-4 text-gray-400">Yes. We deliver, swap, and remove 20‑40 yd containers on flexible schedules.</p>
     </details>
   </div>
