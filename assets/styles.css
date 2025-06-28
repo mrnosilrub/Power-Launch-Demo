@@ -2,3 +2,8 @@
   border: 2px solid #f59e0b;
   border-radius: 0.5rem; /* match rounded-lg */
 }
+
+/* Special styling for the yellow Power‑Launch pricing card */
+.power-launch-card {
+  border-color: #111827; /* dark gray to stand out against yellow background */
+}
