@@ -69,6 +69,13 @@ body {
 .bg-brand-charcoal { background-color: var(--color-headlines) !important; }
 .border-brand-steel { border-color: var(--color-success) !important; }
 
+
+/* Ensure navbar stays sticky even if Tailwind fails to load */
+header.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50; /* match z-50 utility */
+
 /* Nav bar underline animation */
 header nav a,
 #mobileMenu a:not(.bg-yellow-500) {
@@ -108,4 +115,5 @@ header nav a:hover::after,
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+
 }
