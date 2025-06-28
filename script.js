@@ -73,6 +73,17 @@ function initMenu() {
 
     counters.forEach(el => observer.observe(el));
   }
+
+  const homeBtn = document.getElementById('homeButton');
+  if (homeBtn) {
+    homeBtn.addEventListener('click', (e) => {
+      const path = window.location.pathname;
+      if (path === '/' || path.endsWith('index.html') || path === '') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
 }
 
 if (document.readyState === 'loading') {
