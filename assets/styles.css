@@ -86,7 +86,7 @@ header nav a,
 
 header nav a:hover,
 #mobileMenu a:not(.bg-yellow-500):hover {
-  color: inherit !important; /* remove hover color change */
+  color: currentColor !important; /* keep existing color on hover */
 }
 
 header nav a::after,
