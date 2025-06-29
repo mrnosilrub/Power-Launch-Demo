@@ -252,11 +252,16 @@ header nav a:hover::after,
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--color-cards);
+  background-color: var(--color-success);
   border: none;
 }
 .slick-dots li.slick-active button {
   background-color: var(--color-links);
+}
+
+/* Ensure carousel cards aren't clipped */
+.values-carousel .slick-list {
+  overflow: visible;
 }
 
 /* Materials accordion arrow animation */
