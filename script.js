@@ -244,6 +244,15 @@ function initValuesCarousel() {
   const slides = Array.from(container.children);
   if (!slides.length) return;
 
+  let index = 0;
+
+  const setHeight = () => {
+    slides.forEach(s => s.classList.remove('hidden'));
+    const max = Math.max(...slides.map(s => s.offsetHeight));
+    container.style.height = max + 'px';
+    slides.forEach((s, idx) => { if (idx !== index) s.classList.add('hidden'); });
+  };
+
   const dotList = document.createElement('ul');
   dotList.className = 'slick-dots';
 
@@ -257,8 +266,6 @@ function initValuesCarousel() {
   });
 
   container.after(dotList);
-
-  let index = 0;
   const show = (i) => {
     slides.forEach((s, idx) => {
       if (idx === i) {
@@ -285,7 +292,9 @@ function initValuesCarousel() {
   container.addEventListener('mouseenter', () => clearInterval(timer));
   container.addEventListener('mouseleave', () => { timer = setInterval(next, 3000); });
 
+  setHeight();
   show(index);
+  window.addEventListener('resize', setHeight);
 }
 
 function initTeamCarousel() {
