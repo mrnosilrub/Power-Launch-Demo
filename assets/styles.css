@@ -285,5 +285,5 @@ header nav a:hover::after,
 .team-card.flipped .flip-card-inner { transform: rotateY(180deg); }
 
 
-/* Ensure team card images are circular */
-.team-card img { border-radius: 50%; }
+/* Display team photos with rounded corners */
+.team-card img { border-radius: 0.5rem; }
