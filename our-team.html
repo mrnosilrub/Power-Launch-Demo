@@ -89,12 +89,8 @@
       </div>
     </div>
   </section>
-  <section class="bg-[#F4B400] h-16 flex flex-col sm:flex-row justify-center items-center text-center">
-    <a href="#alex" class="px-6 py-2 font-semibold hover:underline">Alex Martinez<br><span class="text-sm font-normal">“Keeping the scale deck flowing since 2009.”</span></a>
-    <a href="#jamie" class="px-6 py-2 font-semibold hover:underline">Jamie Patel<br><span class="text-sm font-normal">“Your GPS‑tracked roll‑off ninja.”</span></a>
-  </section>
   <section id="team" class="py-20">
-    <div class="max-w-6xl mx-auto px-6 grid gap-8 team-grid sm:grid-cols-2 lg:grid-cols-3">
+    <div class="max-w-6xl mx-auto px-6 grid gap-8 team-grid sm:grid-cols-2 lg:grid-cols-2">
       <div id="alex" class="flip-card team-card bg-white rounded-xl shadow border border-brand-steel/10 transition-transform hover:-translate-y-1">
         <div class="flip-card-inner h-80">
           <div class="flip-front flex flex-col items-center text-center">
@@ -162,7 +158,7 @@
       </div>
     </div>
   </section>
-  <section class="bg-[#fafafa] py-20">
+  <section class="bg-[#F3F4F6] py-20">
     <div class="max-w-6xl mx-auto px-6 md:flex items-center gap-10">
       <div class="md:w-7/12">
         <h2 class="text-3xl font-bold mb-6">How We Keep the Yard Running Smoothly</h2>
@@ -174,17 +170,17 @@
       </div>
       <div class="md:w-5/12">
         <div class="values-carousel">
-          <div class="p-6 bg-white rounded-lg shadow text-center">
+          <div class="p-6 bg-white rounded-lg border border-brand-steel/10 shadow text-center">
             <div class="text-brand-orange text-4xl mb-3"><i class="fa-regular fa-clock"></i></div>
             <p class="font-semibold mb-1">Fast Turnaround</p>
             <p class="text-sm text-brand-steel">Digital tickets and cash before you hit the gate.</p>
           </div>
-          <div class="p-6 bg-white rounded-lg shadow text-center">
+          <div class="p-6 bg-white rounded-lg border border-brand-steel/10 shadow text-center">
             <div class="text-brand-orange text-4xl mb-3"><i class="fa-solid fa-recycle"></i></div>
             <p class="font-semibold mb-1">Stewardship</p>
             <p class="text-sm text-brand-steel">Storm-water controls and zero-landfill goals.</p>
           </div>
-          <div class="p-6 bg-white rounded-lg shadow text-center">
+          <div class="p-6 bg-white rounded-lg border border-brand-steel/10 shadow text-center">
             <div class="text-brand-orange text-4xl mb-3"><i class="fa-solid fa-handshake"></i></div>
             <p class="font-semibold mb-1">Partners First</p>
             <p class="text-sm text-brand-steel">Long-term relationships over quick wins.</p>
@@ -201,11 +197,11 @@
   </section>
   <div id="videoModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center p-6">
     <div class="relative w-full max-w-3xl">
-      <button class="absolute top-2 right-2 text-white text-2xl" aria-label="Close">×</button>
+      <button class="absolute top-2 right-2 text-white text-3xl" aria-label="Close">×</button>
       <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" loading="lazy" allowfullscreen></iframe>
     </div>
   </div>
-  <section class="bg-[#004840] text-white py-20 text-center">
+  <section class="bg-brand-orange text-white py-20 text-center">
     <div class="max-w-3xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-4">Want to weld your future with us?</h2>
       <p class="mb-6">Join a crew that values safety, steady pay, and BBQ Fridays.</p>
@@ -215,16 +211,6 @@
         <span class="bg-white text-brand-charcoal px-3 py-1 rounded-full text-sm font-semibold">Monthly BBQ</span>
       </div>
       <a href="careers.html" class="rounded-md bg-brand-orange px-8 py-3 font-semibold text-white shadow hover:opacity-90 transition">View Open Roles</a>
-    </div>
-  </section>
-  <!-- Scrapyard Sites CTA -->
-  <section class="py-20 bg-gray-100 text-center">
-    <div class="max-w-3xl mx-auto px-6">
-      <p class="text-xl mb-6">If this digital experience matches the service you want on the scale deck, let’s launch yours next.</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="contact.html" class="rounded-md bg-brand-orange px-8 py-3 font-semibold text-white shadow hover:opacity-90 transition">Book a Demo</a>
-        <a href="https://scrapyardsites.com" target="_blank" rel="noopener" class="rounded-md bg-white px-8 py-3 font-semibold text-brand-orange shadow hover:bg-gray-100 transition">Visit ScrapyardSites.com</a>
-      </div>
     </div>
   </section>
 </main>
@@ -241,7 +227,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
   if (window.jQuery && document.querySelector('.values-carousel')) {
-    $('.values-carousel').slick({ dots: true, arrows: false });
+    $('.values-carousel').slick({ dots: true, arrows: false, autoplay: true, autoplaySpeed: 3000 });
   }
 </script>
 <script src="script.js"></script>
