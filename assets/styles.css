@@ -7,6 +7,7 @@
   --color-cards: #F3F4F6;     /* light gray section background */
   --color-headlines: #2B2B2B; /* charcoal headlines and body text */
   --color-links: #D75E02;     /* OSHA‑orange primary accent */
+  --color-accent: #FF6A00;   /* hot-metal orange for callouts */
   --color-success: #5E6367;   /* muted steel for secondary accents */
 }
 
@@ -68,6 +69,9 @@ body {
 .text-brand-charcoal { color: var(--color-headlines) !important; }
 .bg-brand-charcoal { background-color: var(--color-headlines) !important; }
 .border-brand-steel { border-color: var(--color-success) !important; }
+.text-accent { color: var(--color-accent) !important; }
+.bg-accent { background-color: var(--color-accent) !important; }
+.border-accent { border-color: var(--color-accent) !important; }
 
 /* Utility for layering mobile menu above sticky header */
 .z-60 {
