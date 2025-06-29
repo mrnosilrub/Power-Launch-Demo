@@ -239,6 +239,8 @@ function initQuoteBar() {
   };
   document.addEventListener('scroll', check);
   window.addEventListener('resize', check);
+  check();
+}
 
 function initTeamCarousel() {
   const container = document.getElementById('teamCarousel');
