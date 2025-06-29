@@ -278,6 +278,7 @@ header nav a:hover::after,
   padding: 1rem;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .timeline-step .icon {
