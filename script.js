@@ -87,20 +87,6 @@ function initMenu() {
     aosEls.forEach(el => aosObserver.observe(el));
   }
 
-  const quoteBar = document.getElementById('quoteBar');
-  if (quoteBar) {
-    const close = quoteBar.querySelector('button');
-    if (close) {
-      close.addEventListener('click', () => quoteBar.classList.add('hidden'));
-    }
-    const onScroll = () => {
-      const depth = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-      if (depth > 0.75) {
-        quoteBar.classList.remove('hidden');
-      }
-    };
-    window.addEventListener('scroll', onScroll);
-  }
 
   const homeBtn = document.getElementById('homeButton');
   if (homeBtn) {
@@ -116,21 +102,6 @@ function initMenu() {
 }
 
 
-function initStickyCTA() {
-  const cta = document.getElementById('stickyCTA');
-  if (!cta) return;
-  const close = cta.querySelector('button[aria-label="Close"]');
-  if (close) close.addEventListener('click', () => cta.classList.add('hidden'));
-  const showAt = 0.8;
-  const onScroll = () => {
-    const progress = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
-    if (progress >= showAt) {
-      cta.classList.remove('hidden');
-      window.removeEventListener('scroll', onScroll);
-    }
-  };
-  window.addEventListener('scroll', onScroll);
-}
 
 function initFlyOver() {
   const btn = document.getElementById('flyOverBtn');
@@ -169,7 +140,6 @@ function initYardMap() {
 
 function initPage() {
   initMenu();
-  initStickyCTA();
   initFlyOver();
   initYardMap();
 }
