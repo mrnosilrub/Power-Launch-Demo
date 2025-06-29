@@ -173,9 +173,7 @@ header nav a:hover::after,
 
 /* Contrasted banner for the bottom call to action */
 .cta-banner {
-  background: linear-gradient(-45deg, #D75E02, #FFA726, #FF6A00, #D75E02);
-  background-size: 600% 600%;
-  animation: stats-gradient-animation 10s ease infinite;
+  background-color: var(--color-links);
 }
 
 /* AOS fade-up utility */
