@@ -83,7 +83,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
-      
+
       <a href="services.html" class="hover:text-yellow-400">Services</a>
       <a href="locations.html" class="hover:text-yellow-400">Locations</a>
       <a href="pricing.html" class="hover:text-yellow-400">Pricing</a>
@@ -92,52 +92,171 @@
       <a href="faq.html" class="hover:text-yellow-400">FAQ</a>
       <a href="contact.html" class="inline-block rounded-md bg-brand-orange px-8 py-3 font-semibold text-white shadow hover:opacity-90 transition">Request a Quote</a>
     </div>
-  </header>
+</header>
 <main class="flex-grow">
 
-<section class="max-w-7xl mx-auto px-4 py-20">
-  <h1 class="text-5xl font-bold mb-8 text-center">Services</h1>
-  <p class="text-xl text-center max-w-3xl mx-auto text-gray-400 mb-12">Three ways we turn scrap into cash—and keep your project on schedule.</p>
-  <div class="space-y-12">
-    <div>
-      <h2 class="text-3xl font-semibold mb-2">1&nbsp;Ferrous &amp; Non-Ferrous Buying</h2>
-      <p class="text-gray-400 mb-4">Fast weights, fair rates, instant payouts.</p>
-      <ul class="list-disc pl-5 text-gray-400 space-y-1">
-        <li>Metals we pay top dollar for: copper (all grades), brass, aluminum (sheet, extrusions, wheels), steel &amp; cast iron, stainless, lead, zinc plus high-value alloys (nickel, titanium, Inconel, Monel).</li>
-        <li>Digital price board tied to LME &amp; Comex—no hidden spreads.</li>
-        <li>Calibrated drive-on scale with printed tickets in plain view.</li>
-        <li>Cash, ACH, or check while you watch the ticket print.</li>
-        <li>Chain-of-custody option for exotic alloys—sealed totes, bar-coded tags, and certified XRF/LIBS reports.</li>
-      </ul>
-    </div>
+<!-- Hero -->
+<section id="top" class="relative isolate min-h-[70vh] flex flex-col items-center justify-center text-center text-white" data-aos="fade-up">
+  <div class="absolute inset-0 bg-[url('https://picsum.photos/seed/loader/1200/800')] bg-cover bg-center"></div>
+  <div class="absolute inset-0 bg-black/60"></div>
+  <h1 class="text-4xl md:text-5xl font-extrabold z-10">Three Ways We Turn Scrap Into Cash.</h1>
+  <p class="mt-4 text-lg z-10">Choose the option that fits your haul, schedule, and job-site.</p>
+  <div class="mt-8 flex flex-col sm:flex-row gap-4 z-10">
+    <a href="#buying" class="rounded-md bg-white/10 px-6 py-3 font-semibold hover:bg-white/20">Walk-In Buying</a>
+    <a href="#containers" class="rounded-md bg-white/10 px-6 py-3 font-semibold hover:bg-white/20">Roll-Offs</a>
+    <a href="#demo" class="rounded-md bg-white/10 px-6 py-3 font-semibold hover:bg-white/20">Demolition</a>
+  </div>
+</section>
 
-    <div>
-      <h2 class="text-3xl font-semibold mb-2">2&nbsp;Industrial Container Service (Roll-Offs &amp; Luggers)</h2>
-      <p class="text-gray-400 mb-4">Bin swaps that never slow your line.</p>
-      <ul class="list-disc pl-5 text-gray-400 space-y-1">
-        <li>20–60 yd³ bins matched to your scrap volume.</li>
-        <li>Same-day drop &amp; swap inside a 50-mile radius (4-hr average).</li>
-        <li>Transparent tonnage reports—scale tickets &amp; photos emailed before the truck leaves.</li>
-        <li>No rental fees—you pay freight only; metal value offsets the rest.</li>
-        <li>OSHA-certified drivers, GPS-tracked and fully insured.</li>
-      </ul>
-    </div>
+<!-- Quick Select -->
+<section class="mt-10">
+  <div class="hidden md:grid md:grid-cols-3 gap-6 mt-10 max-w-7xl mx-auto px-6">
+    <a href="#buying" class="group relative rounded-lg overflow-hidden shadow-lg">
+      <img src="https://picsum.photos/seed/buy/600/400" alt="Buying" class="w-full h-full object-cover"/>
+      <div class="absolute inset-0 bg-black/30 group-hover:bg-brand-orange/80 transition"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+        <h3 class="text-xl font-semibold">Walk-In Buying</h3>
+        <p class="text-sm">Cash on the spot</p>
+        <span class="mt-2 text-2xl">Learn more ↓</span>
+      </div>
+    </a>
+    <a href="#containers" class="group relative rounded-lg overflow-hidden shadow-lg">
+      <img src="https://picsum.photos/seed/bin/600/400" alt="Containers" class="w-full h-full object-cover"/>
+      <div class="absolute inset-0 bg-black/30 group-hover:bg-brand-orange/80 transition"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+        <h3 class="text-xl font-semibold">Roll-Offs</h3>
+        <p class="text-sm">Drop, swap, report</p>
+        <span class="mt-2 text-2xl">Learn more ↓</span>
+      </div>
+    </a>
+    <a href="#demo" class="group relative rounded-lg overflow-hidden shadow-lg">
+      <img src="https://picsum.photos/seed/demo/600/400" alt="Demolition" class="w-full h-full object-cover"/>
+      <div class="absolute inset-0 bg-black/30 group-hover:bg-brand-orange/80 transition"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+        <h3 class="text-xl font-semibold">Demolition</h3>
+        <p class="text-sm">Cut & clean sites</p>
+        <span class="mt-2 text-2xl">Learn more ↓</span>
+      </div>
+    </a>
+  </div>
+  <div class="md:hidden space-y-4 px-4">
+    <details class="group bg-gray-100 rounded-md">
+      <summary class="cursor-pointer p-4 flex justify-between items-center">Walk-In Buying <span>&#9660;</span></summary>
+      <div class="p-4 bg-gray-50">
+        <a href="#buying" class="text-brand-orange underline">Learn more</a>
+      </div>
+    </details>
+    <details class="group bg-gray-100 rounded-md">
+      <summary class="cursor-pointer p-4 flex justify-between items-center">Roll-Offs <span>&#9660;</span></summary>
+      <div class="p-4 bg-gray-50">
+        <a href="#containers" class="text-brand-orange underline">Learn more</a>
+      </div>
+    </details>
+    <details class="group bg-gray-100 rounded-md">
+      <summary class="cursor-pointer p-4 flex justify-between items-center">Demolition <span>&#9660;</span></summary>
+      <div class="p-4 bg-gray-50">
+        <a href="#demo" class="text-brand-orange underline">Learn more</a>
+      </div>
+    </details>
+  </div>
+</section>
 
+<!-- Service Details -->
+<section id="buying" class="scroll-mt-16 py-20 min-h-screen">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
     <div>
-      <h2 class="text-3xl font-semibold mb-2">3&nbsp;Demolition &amp; Clean-Up</h2>
-      <p class="text-gray-400 mb-4">From smokestacks to shop floors—we dismantle, segregate, and recycle.</p>
-      <ul class="list-disc pl-5 text-gray-400 space-y-1">
-        <li>Licensed &amp; insured crews with confined-space &amp; torch-cutting certs.</li>
-        <li>Turn-key project management—permits, utility disconnects, environmental surveys, final grading.</li>
-        <li>On-site processing (shears, portable balers, magnets) to maximize scrap value and minimize haul-offs.</li>
-        <li>100% recycling goal—metals to the mill, concrete to aggregate, zero unsorted landfill loads.</li>
+      <img src="https://picsum.photos/seed/copper/800/600" alt="sorted copper" class="rounded-lg w-full h-full object-cover bg-brand-orange/20">
+    </div>
+    <div>
+      <h2 class="text-3xl font-semibold mb-4">Walk-In Weigh • Watch the Ticket Print</h2>
+      <ul class="space-y-2 mb-4 text-brand-steel">
+        <li>💲 price-board</li>
+        <li>🔒 state-cert scales</li>
+        <li>💸 instant pay</li>
+        <li>📈 market-linked</li>
       </ul>
+      <div class="flex gap-4 mb-6">
+        <span class="bg-brand-orange text-white rounded-full px-4 py-2 text-sm">97% Repeat Sellers</span>
+        <span class="bg-brand-orange text-white rounded-full px-4 py-2 text-sm">≤10 min Avg Yard Time</span>
+      </div>
+      <a href="pricing.html" class="rounded-md bg-brand-orange px-6 py-3 text-white font-semibold">View Today’s Prices</a>
+    </div>
+  </div>
+</section>
+
+<section id="containers" class="scroll-mt-16 py-20 min-h-screen bg-gray-100">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    <div class="md:order-2">
+      <img src="https://picsum.photos/seed/container/800/600" alt="containers" class="rounded-lg w-full h-full object-cover">
+    </div>
+    <div class="md:order-1 space-y-4">
+      <h2 class="text-3xl font-semibold">Industrial Container Service</h2>
+      <ol class="border-l-2 border-brand-orange pl-4 space-y-2">
+        <li><span class="font-bold text-brand-orange">Drop</span></li>
+        <li><span class="font-bold text-brand-orange">Swap</span></li>
+        <li><span class="font-bold text-brand-orange">Report</span></li>
+      </ol>
+      <div class="flex gap-2 mt-6">
+        <img src="https://picsum.photos/seed/bin20/150/100" alt="20 yd" class="rounded">
+        <img src="https://picsum.photos/seed/bin30/150/100" alt="30 yd" class="rounded">
+        <img src="https://picsum.photos/seed/bin60/150/100" alt="60 yd" class="rounded">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="demo" class="scroll-mt-16 py-20 min-h-screen bg-zinc-900 text-white relative">
+  <img src="https://picsum.photos/seed/torch/1200/800" alt="demolition" class="absolute inset-0 w-full h-full object-cover brightness-50 -z-10">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row gap-10 items-center">
+    <div class="md:w-3/5 bg-zinc-900/80 p-6 rounded-lg space-y-4">
+      <h2 class="text-3xl font-semibold">Demolition & Clean-Up</h2>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Scope list item</li>
+        <li>Insurance badges</li>
+        <li>Safety icons</li>
+      </ul>
+      <div class="flex gap-4 mt-4">
+        <a href="contact.html" class="rounded-md bg-brand-orange px-4 py-2 text-white font-semibold">Request Site Walk-Through</a>
+        <a href="#" class="rounded-md border border-white px-4 py-2 font-semibold">Download Scope PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison Strip -->
+<section class="bg-gray-50 py-10">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid grid-cols-3 divide-x divide-gray-300 text-center text-sm">
+      <div class="px-2">
+        <p class="font-semibold">Walk-In Buying</p>
+        <p>Best for &lt;14 k lb loads</p>
+        <p>Turnaround ≤10 min</p>
+        <p>Payment Cash / ACH</p>
+      </div>
+      <div class="px-2">
+        <p class="font-semibold">Roll-Offs</p>
+        <p>Best for High-volume off-cuts</p>
+        <p>Turnaround Same-day</p>
+        <p>Payment Net 30 or credit</p>
+      </div>
+      <div class="px-2">
+        <p class="font-semibold">Demo & Clean-Up</p>
+        <p>Best for Full facility teardown</p>
+        <p>Turnaround Project-based</p>
+        <p>Payment Progress draws</p>
+      </div>
     </div>
   </div>
 </section>
 
 </main>
-<!-- ── Footer ──────────────────────────────────────────────── -->
+
+<div id="quoteBar" class="hidden fixed bottom-0 left-0 right-0 bg-brand-orange text-white py-3 px-6 justify-between items-center shadow-xl">
+  <span>Ready to book a container or price your load? → 📞 (555) 123-SCRAP / ✉️ <a href="contact.html" class="underline">Request Quote</a></span>
+  <button aria-label="Dismiss" class="ml-4 text-xl">&times;</button>
+</div>
+
+<!-- Footer -->
 <footer class="bg-white py-8 text-center text-xs text-gray-400">
   <p>© <span id="year"></span> Scrapyard Sites — All rights reserved.</p>
 </footer>
