@@ -147,10 +147,31 @@ function initYardMap() {
   });
 }
 
+function initTimeline() {
+  const steps = document.querySelectorAll('.timeline-step');
+  const line = document.querySelector('.timeline-line');
+  steps.forEach(step => {
+    const tip = step.querySelector('.timeline-tip');
+    const show = () => {
+      if (tip) tip.classList.remove('hidden');
+      if (line) line.classList.add('highlight');
+    };
+    const hide = () => {
+      if (tip) tip.classList.add('hidden');
+      if (line) line.classList.remove('highlight');
+    };
+    step.addEventListener('mouseenter', show);
+    step.addEventListener('mouseleave', hide);
+    step.addEventListener('focus', show);
+    step.addEventListener('blur', hide);
+  });
+}
+
 function initPage() {
   initMenu();
   initFlyOver();
   initYardMap();
+  initTimeline();
 }
 
 if (document.readyState === 'loading') {
