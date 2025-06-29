@@ -147,9 +147,6 @@ function initYardMap() {
   });
 }
 
-
-
-
 function initTimeline() {
   const steps = document.querySelectorAll('.timeline-step');
   const line = document.querySelector('.timeline-line');
