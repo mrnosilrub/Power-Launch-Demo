@@ -94,6 +94,10 @@ header nav a:hover,
 #mobileMenu a:not(.bg-yellow-500):hover {
   color: currentColor !important; /* keep existing color on hover */
 }
+/* Keep active nav item orange even when hovered */
+header nav a.text-yellow-400:hover {
+  color: var(--color-links) !important;
+}
 
 header nav a::after,
 #mobileMenu a:not(.bg-yellow-500)::after {
