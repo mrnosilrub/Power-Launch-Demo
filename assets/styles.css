@@ -88,6 +88,13 @@ header.sticky {
   flex-shrink: 0; /* prevent collapsing in flex layouts */
 }
 
+/* Provide fallback sticky behavior in case Tailwind classes fail */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
 /* Nav bar underline animation */
 header nav a,
 #mobileMenu a:not(.bg-yellow-500) {
@@ -287,3 +294,12 @@ header nav a:hover::after,
 
 /* Display team photos with rounded corners */
 .team-card img { border-radius: 0.5rem; }
+
+/* Review carousel tweaks */
+.review-carousel {
+  overflow: hidden;
+}
+.review-carousel .slick-slide {
+  border: none;
+  outline: none;
+}
