@@ -228,4 +228,24 @@ header nav a:hover::after,
 }
 .material-details details[open] summary .arrow {
   transform: rotate(90deg);
+/* Process page utilities */
+.process-tip {
+  background-color: #FFFBE6;
+  border-left: 2px solid #F4B400;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-step .icon {
+  transition: transform 0.2s;
+}
+.timeline-step:hover .icon {
+  transform: translateY(-6px);
+}
+.timeline-line.highlight {
+  background-color: #F4B400;
+}
+.timeline-tip {
+  white-space: nowrap;
 }

@@ -24,8 +24,9 @@
   };
 </script>
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-<link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 <link rel="stylesheet" href="assets/styles.css">
 <meta name="description" content="Understand Demo Yard's scrap metal recycling process from drop-off to payment.">
 <meta property="og:title" content="Process | Demo Yard">
@@ -95,30 +96,83 @@
     </div>
 <main class="flex-grow">
 
-<section id="hero" class="relative isolate flex items-center justify-center h-[80vh] text-center">
-  <div class="absolute inset-0 -z-10 bg-[url('assets/hero.jpg')] bg-cover bg-center brightness-[.55]"></div>
-  <div class="absolute inset-0 -z-10 bg-black/60"></div>
+<section id="hero" class="relative isolate flex items-center justify-center text-center h-[60vh] md:h-screen">
+  <div class="absolute inset-0 -z-10 bg-[url('assets/hero.jpg')] bg-cover bg-center"></div>
+  <div class="absolute inset-0 -z-10 bg-[#004840]/70"></div>
   <div class="relative z-10 max-w-2xl px-6">
-    <h1 class="text-4xl md:text-6xl font-extrabold text-white">From Pull-Up to Payout in 3 Easy Steps</h1>
-    <p class="mt-4 text-lg text-white">Average yard time: 10 minutes. No appointment needed.</p>
-    <!-- action buttons removed -->
+    <h1 class="font-extrabold text-white text-[clamp(38px,7vw,56px)]">From Pull-Up to Payout in 3 Easy Steps</h1>
+    <p class="mt-4 text-lg text-white">Average yard time: 10&nbsp;minutes — no appointment needed.</p>
+    <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+      <a href="contact.html" class="rounded-md bg-brand-orange px-8 py-3 font-semibold text-white shadow hover:opacity-90 transition">Request a Quote</a>
+      <a href="pricing.html" class="rounded-md border border-white px-8 py-3 font-semibold text-white hover:bg-white/10 transition">Get Today's Prices</a>
+    </div>
   </div>
 </section>
 
-  <section class="py-20 bg-white">
-    <div class="max-w-3xl mx-auto px-6">
-      <ol class="list-decimal list-inside space-y-4 text-brand-steel text-left">
-        <li><strong class="text-brand-charcoal">Check Your Metal</strong> – Browse our Accepted Materials list or text us a photo if you’re unsure.</li>
-        <li><strong class="text-brand-charcoal">Drive On &amp; Receive a Yard Pass</strong> – Our gate staff logs your license plate and verifies photo ID (state law).</li>
-        <li><strong class="text-brand-charcoal">Weigh In</strong> – Stop on the truck scale or small‑load platform; your empty weight is recorded.</li>
-        <li><strong class="text-brand-charcoal">Unload &amp; Grade</strong> – Our team separates ferrous from non‑ferrous and pulls commodity‑grade pictures for your records.</li>
-        <li><strong class="text-brand-charcoal">Weigh Out</strong> – Roll back over the scale; the system prints a ticket showing gross, tare, net, and material codes.</li>
-        <li><strong class="text-brand-charcoal">Get Paid</strong> – Choose cash, check, or same‑day ACH. Industrial accounts can opt for weekly settlement.</li>
-      </ol>
-      <p class="mt-6 text-center text-brand-steel">Average time on site: ≈ 10 minutes for mixed‑metal loads, ≈ 5 minutes for clean, single‑commodity loads.</p>
-      <p class="mt-2 text-center text-sm italic text-brand-steel">Pro tip: Keep fuel, oil, and refrigerants drained; we can’t accept haz‑mat items or wet loads.</p>
+  <section class="py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8">What Customers Say</h2>
+      <div class="review-carousel">
+        <div class="p-6 bg-white rounded-lg shadow text-center">
+          <p class="text-brand-steel italic mb-2">“No wait and friendly crew. In and out in minutes.”</p>
+          <span class="text-sm font-semibold">&ndash; Google Review</span>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow text-center">
+          <p class="text-brand-steel italic mb-2">“Quick in-and-out, best prices around.”</p>
+          <span class="text-sm font-semibold">&ndash; Google Review</span>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow text-center">
+          <p class="text-brand-steel italic mb-2">“Fast service, no appointment needed.”</p>
+          <span class="text-sm font-semibold">&ndash; Google Review</span>
+        </div>
+      </div>
     </div>
   </section>
+
+  <section class="py-20 bg-white">
+    <div class="timeline-container max-w-[1024px] mx-auto px-6">
+      <ul class="timeline flex flex-col md:flex-row justify-between gap-8 md:gap-14 relative">
+        <div class="timeline-line hidden md:block absolute top-12 left-0 right-0 h-px bg-brand-steel"></div>
+        <li class="timeline-step relative flex flex-col items-start md:items-center text-left md:text-center">
+          <div class="icon w-16 h-16 md:w-24 md:h-24 flex items-center justify-center rounded-full border-2 border-brand-steel text-brand-steel transition-transform">
+            <img src="assets/clipboard-document-list.svg" alt="Check Material" class="w-8 md:w-10">
+          </div>
+          <h3 class="mt-4 text-base md:text-lg font-semibold">Check&nbsp;Your&nbsp;Material</h3>
+          <p class="mt-2 text-sm md:text-[15px] max-w-[220px]">Browse Accepted Materials or text us a photo.</p>
+          <div class="timeline-tip hidden absolute md:-top-14 md:left-1/2 md:-translate-x-1/2 bg-white border border-brand-steel text-xs text-brand-charcoal rounded-md shadow px-2 py-1">Haz‑mat? Liquids? Give us a call first.</div>
+        </li>
+        <li class="timeline-step relative flex flex-col items-start md:items-center text-left md:text-center">
+          <div class="icon w-16 h-16 md:w-24 md:h-24 flex items-center justify-center rounded-full border-2 border-brand-steel text-brand-steel transition-transform">
+            <img src="assets/truck.svg" alt="Drive On" class="w-8 md:w-10">
+          </div>
+          <h3 class="mt-4 text-base md:text-lg font-semibold">Drive&nbsp;On&nbsp;&amp;&nbsp;Unload</h3>
+          <p class="mt-2 text-sm md:text-[15px] max-w-[220px]">Roll onto the calibrated scale, get a yard pass; crew grades &amp; unloads.</p>
+          <div class="timeline-tip hidden absolute md:-top-14 md:left-1/2 md:-translate-x-1/2 bg-white border border-brand-steel text-xs text-brand-charcoal rounded-md shadow px-2 py-1">Leave batteries &amp; copper up front for quickest check‑out.</div>
+        </li>
+        <li class="timeline-step relative flex flex-col items-start md:items-center text-left md:text-center">
+          <div class="icon w-16 h-16 md:w-24 md:h-24 flex items-center justify-center rounded-full border-2 border-brand-steel text-brand-steel transition-transform">
+            <img src="assets/banknotes.svg" alt="Get Paid" class="w-8 md:w-10">
+          </div>
+          <h3 class="mt-4 text-base md:text-lg font-semibold">Get&nbsp;Paid—Instantly</h3>
+          <p class="mt-2 text-sm md:text-[15px] max-w-[220px]">Weight ticket prints; choose Cash, ACH, or Check.</p>
+          <div class="timeline-tip hidden absolute md:-top-14 md:left-1/2 md:-translate-x-1/2 bg-white border border-brand-steel text-xs text-brand-charcoal rounded-md shadow px-2 py-1">Opt‑in for weekly ACH if you’re an industrial account.</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bg-[#004840] text-white">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
+      <div class="flex-1 py-4">10&nbsp;min – Avg. yard time</div>
+      <div class="flex-1 py-4">5&nbsp;min – Clean loads</div>
+      <div class="flex-1 py-4">0 – Appointments needed</div>
+    </div>
+  </section>
+
+  <aside class="process-tip mx-auto max-w-3xl px-6 mt-8">
+    <svg class="w-5 h-5 text-brand-orange mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L9.586 11H3a1 1 0 110-2h6.586L7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
+    <strong>Quick reminder:</strong>&nbsp;Drain fuel, oil and refrigerants—wet loads can’t be accepted.
+  </aside>
 
 
 
@@ -170,6 +224,13 @@
 <script>
   /* dynamic year for footer */
   document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+  if (window.jQuery && document.querySelector('.review-carousel')) {
+    $('.review-carousel').slick({ dots: true, arrows: false });
+  }
 </script>
 <script src="script.js"></script>
 </body>
