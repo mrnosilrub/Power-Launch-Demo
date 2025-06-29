@@ -183,6 +183,17 @@ header nav a:hover::after,
   background-color: var(--color-links);
 }
 
+/* Consistent sizing for hero buttons */
+.hero-cta a {
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 640px) {
+  .hero-cta a {
+    width: auto;
+  }
+}
+
 /* AOS fade-up utility */
 [data-aos] {
   opacity: 0;
