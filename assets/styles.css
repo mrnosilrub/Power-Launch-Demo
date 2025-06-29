@@ -258,6 +258,7 @@ header nav a:hover::after,
 }
 .material-details details[open] summary .arrow {
   transform: rotate(90deg);
+}
 /* Process page utilities */
 .process-tip {
   background-color: #FFFBE6;
