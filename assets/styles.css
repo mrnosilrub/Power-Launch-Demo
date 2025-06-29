@@ -249,3 +249,7 @@ header nav a:hover::after,
 .timeline-tip {
   white-space: nowrap;
 }
+
+/* Team card flipped state */
+.team-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+
