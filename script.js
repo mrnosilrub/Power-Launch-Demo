@@ -115,9 +115,67 @@ function initMenu() {
 
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initMenu);
-} else {
-  initMenu();
+
+function initStickyCTA() {
+  const cta = document.getElementById('stickyCTA');
+  if (!cta) return;
+  const close = cta.querySelector('button[aria-label="Close"]');
+  if (close) close.addEventListener('click', () => cta.classList.add('hidden'));
+  const showAt = 0.8;
+  const onScroll = () => {
+    const progress = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+    if (progress >= showAt) {
+      cta.classList.remove('hidden');
+      window.removeEventListener('scroll', onScroll);
+    }
+  };
+  window.addEventListener('scroll', onScroll);
 }
 
+function initFlyOver() {
+  const btn = document.getElementById('flyOverBtn');
+  const modal = document.getElementById('flyOverModal');
+  if (!btn || !modal) return;
+  const video = modal.querySelector('video');
+  const close = modal.querySelector('button[aria-label="Close"]');
+  const open = () => { modal.classList.remove('hidden'); };
+  const hide = () => { modal.classList.add('hidden'); if (video) video.pause(); };
+  btn.addEventListener('click', open);
+  if (close) close.addEventListener('click', hide);
+}
+
+function initYardMap() {
+  const map = document.getElementById('yardMap');
+  const tooltip = document.getElementById('mapTooltip');
+  if (!map || !tooltip) return;
+  const zones = map.querySelectorAll('rect');
+  zones.forEach(zone => {
+    zone.addEventListener('mouseenter', (e) => {
+      const info = zone.getAttribute('data-info');
+      if (!info) return;
+      tooltip.textContent = info;
+      tooltip.style.left = `${e.offsetX + 10}px`;
+      tooltip.style.top = `${e.offsetY + 10}px`;
+      tooltip.classList.remove('hidden');
+    });
+    zone.addEventListener('mouseleave', () => {
+      tooltip.classList.add('hidden');
+    });
+    zone.addEventListener('click', () => {
+      tooltip.classList.add('hidden');
+    });
+  });
+}
+
+function initPage() {
+  initMenu();
+  initStickyCTA();
+  initFlyOver();
+  initYardMap();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPage);
+} else {
+  initPage();
+}
