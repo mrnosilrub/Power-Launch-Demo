@@ -275,6 +275,12 @@ header nav a:hover::after,
   overflow: visible;
 }
 
+@media (max-width: 767px) {
+  .values-carousel > div {
+    min-height: 12rem;
+  }
+}
+
 /* Materials accordion arrow animation */
 .material-details summary .arrow {
   transition: transform 0.2s ease;
