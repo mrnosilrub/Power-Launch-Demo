@@ -174,7 +174,11 @@ function initTeamFlip() {
   cards.forEach(card => {
     card.addEventListener('click', () => {
       if (window.matchMedia('(hover: none)').matches) {
-        card.classList.toggle('flipped');
+        const active = card.classList.toggle('flipped');
+        if (!active) {
+          const focused = card.querySelector(':focus');
+          if (focused) focused.blur();
+        }
       }
     });
     card.addEventListener('keyup', (e) => {
