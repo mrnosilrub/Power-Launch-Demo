@@ -238,6 +238,46 @@ function initQuoteBar() {
   check();
 }
 
+function initValuesCarousel() {
+  const container = document.querySelector('.values-carousel');
+  if (!container) return;
+  const slides = Array.from(container.children);
+  if (!slides.length) return;
+
+  const dotList = document.createElement('ul');
+  dotList.className = 'slick-dots';
+
+  slides.forEach((slide, idx) => {
+    if (idx !== 0) slide.classList.add('hidden');
+    const li = document.createElement('li');
+    const btn = document.createElement('button');
+    li.appendChild(btn);
+    dotList.appendChild(li);
+    btn.addEventListener('click', () => show(idx));
+  });
+
+  container.after(dotList);
+
+  let index = 0;
+  const show = (i) => {
+    slides.forEach((s, idx) => s.classList.toggle('hidden', idx !== i));
+    dotList.querySelectorAll('li').forEach((d, idx) => {
+      d.classList.toggle('slick-active', idx === i);
+    });
+  };
+
+  const next = () => {
+    index = (index + 1) % slides.length;
+    show(index);
+  };
+
+  let timer = setInterval(next, 3000);
+  container.addEventListener('mouseenter', () => clearInterval(timer));
+  container.addEventListener('mouseleave', () => { timer = setInterval(next, 3000); });
+
+  show(index);
+}
+
 function initTeamCarousel() {
   const container = document.getElementById('teamCarousel');
   if (!container) return;
@@ -282,6 +322,8 @@ function initPage() {
   initQuoteBar();
 
   initMaterialCards();
+
+  initValuesCarousel();
 
   initTeamCarousel();
 
