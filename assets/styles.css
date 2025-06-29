@@ -81,6 +81,7 @@ header.sticky {
   position: sticky;
   top: 0;
   z-index: 50; /* match z-50 utility */
+  flex-shrink: 0; /* prevent collapsing in flex layouts */
 }
 
 /* Nav bar underline animation */
