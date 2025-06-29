@@ -195,3 +195,29 @@ header nav a:hover::after,
   position: relative;
   top: -0.25rem; /* move upward ~4px */
 }
+
+/* Flip card utility for service grid */
+.flip-card { perspective: 1000px; }
+.flip-card-inner {
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-front,
+.flip-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.flip-back {
+  transform: rotateY(180deg);
+}
