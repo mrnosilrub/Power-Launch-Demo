@@ -188,6 +188,9 @@ header nav a:hover::after,
   transform: translateY(0);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+#cta-final.aos-active {
+  transition-duration: 0.25s;
+}
 
 /* Slight offset for timeline icons */
 .timeline-icon {

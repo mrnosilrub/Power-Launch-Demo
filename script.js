@@ -7,6 +7,7 @@ function toggleMenu() {
 }
 
 function initMenu() {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const btn = document.getElementById('menuButton');
   const closeBtn = document.getElementById('closeMenu');
   if (btn) {
@@ -42,7 +43,7 @@ function initMenu() {
   });
 
   const counters = document.querySelectorAll('.stat-number');
-  if (counters.length) {
+  if (counters.length && !prefersReduced) {
     const animate = (el) => {
       const target = parseInt(el.getAttribute('data-target'), 10) || 0;
       const suffix = el.getAttribute('data-suffix') || '';
@@ -72,10 +73,16 @@ function initMenu() {
     }, { threshold: 0.6 });
 
     counters.forEach(el => observer.observe(el));
+  } else if (prefersReduced) {
+    counters.forEach(el => {
+      const target = el.getAttribute('data-target') || '0';
+      const suffix = el.getAttribute('data-suffix') || '';
+      el.textContent = target + suffix;
+    });
   }
 
   const aosEls = document.querySelectorAll('[data-aos]');
-  if (aosEls.length) {
+  if (aosEls.length && !prefersReduced) {
     const aosObserver = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -85,6 +92,8 @@ function initMenu() {
       });
     }, { threshold: 0.1 });
     aosEls.forEach(el => aosObserver.observe(el));
+  } else if (prefersReduced) {
+    aosEls.forEach(el => el.classList.add('aos-active'));
   }
 
 
