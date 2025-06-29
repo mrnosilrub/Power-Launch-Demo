@@ -260,7 +260,17 @@ function initValuesCarousel() {
 
   let index = 0;
   const show = (i) => {
-    slides.forEach((s, idx) => s.classList.toggle('hidden', idx !== i));
+    slides.forEach((s, idx) => {
+      if (idx === i) {
+        s.classList.remove('hidden');
+        s.classList.add('fade-in');
+        s.addEventListener('animationend', () => {
+          s.classList.remove('fade-in');
+        }, { once: true });
+      } else {
+        s.classList.add('hidden');
+      }
+    });
     dotList.querySelectorAll('li').forEach((d, idx) => {
       d.classList.toggle('slick-active', idx === i);
     });
