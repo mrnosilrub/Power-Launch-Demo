@@ -84,6 +84,17 @@ function initMenu() {
       }
     });
   }
+
+  const band = document.getElementById('client-band');
+  if (band) {
+    const testimonial = document.getElementById('client-testimonial');
+    band.addEventListener('click', () => {
+      if (testimonial) {
+        testimonial.classList.toggle('hidden');
+        testimonial.classList.toggle('flex');
+      }
+    });
+  }
 }
 
 if (document.readyState === 'loading') {
