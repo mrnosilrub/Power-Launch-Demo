@@ -70,7 +70,7 @@ function initMenu() {
           obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.6 });
+    }, { threshold: 0.4 });
 
     counters.forEach(el => observer.observe(el));
   } else if (prefersReduced) {
@@ -165,6 +165,12 @@ function initMaterialSearch() {
   });
 }
 
+
+    // Close the input event handler and the initMaterialSearch function
+  });
+}
+
+
 function initTimeline() {
   const steps = document.querySelectorAll('.timeline-step');
   const line = document.querySelector('.timeline-line');
@@ -185,6 +191,7 @@ function initTimeline() {
 
   });
 }
+
 
 function initTeamFlip() {
   const cards = document.querySelectorAll('.team-card');
@@ -232,6 +239,35 @@ function initQuoteBar() {
   };
   document.addEventListener('scroll', check);
   window.addEventListener('resize', check);
+
+function initTeamCarousel() {
+  const container = document.getElementById('teamCarousel');
+  if (!container) return;
+  const slides = container.querySelectorAll('.carousel-slide');
+  const dots = container.querySelectorAll('.carousel-dot');
+  let index = 0;
+  const show = (i) => {
+    slides.forEach((s, idx) => {
+      if (idx === i) {
+        s.classList.remove('hidden');
+      } else {
+        s.classList.add('hidden');
+      }
+    });
+    dots.forEach((d, idx) => {
+      d.classList.toggle('bg-brand-orange', idx === i);
+    });
+  };
+  show(index);
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    show(index);
+  }, 4000);
+  dots.forEach((d, idx) => d.addEventListener('click', () => {
+    index = idx;
+    show(index);
+  }));
+
 }
 
 function initPage() {
@@ -243,9 +279,13 @@ function initPage() {
 
   initTimeline();
 
+
   initTeamFlip();
   initVideoModal();
   initQuoteBar();
+
+  initTeamCarousel();
+
 
 }
 
