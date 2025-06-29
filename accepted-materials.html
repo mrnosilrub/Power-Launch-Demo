@@ -77,100 +77,242 @@
     </div>
   </header>
 <main class="flex-grow">
-  <section class="scroll-mt-16 py-20 bg-gray-100" id="materials">
-    <div class="mx-auto max-w-6xl px-6 text-center">
-      <h1 class="text-4xl font-bold mb-8">Accepted Materials</h1>
-      <p class="text-brand-steel mb-12">These common items bring the best rates.</p>
+  <!-- Hero -->
+  <section id="top" class="scroll-mt-16 relative isolate flex items-center justify-center text-center min-h-[50vh] md:min-h-[80vh]">
+    <div class="absolute inset-0 -z-10">
+      <img src="assets/hero.jpg" alt="" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-[#004840]/70"></div>
     </div>
-      <div class="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto px-6">
-        <div class="rounded-xl bg-white border border-brand-steel/10 shadow transition transform hover:-translate-y-1 p-6 flex flex-col items-center text-center">
-          <div class="mb-3 rounded-lg overflow-hidden border border-brand-steel/10">
-            <img src="assets/hero.jpg" alt="Copper &amp; Brass">
+    <div class="flex flex-col items-center justify-center w-full h-full px-6">
+      <h1 class="font-extrabold text-white leading-tight" style="font-size:clamp(40px,7vw,56px)">Accepted Materials</h1>
+      <p class="mt-4 text-white text-lg">Top prices for copper, aluminum, steel and more—zero hidden fees.</p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="contact.html" class="rounded-md bg-brand-orange px-8 py-3 font-semibold text-white shadow hover:opacity-90 transition">Request a Quote</a>
+        <a href="contact.html" class="rounded-md border border-white px-8 py-3 font-semibold text-white hover:bg-white/10 transition">Text a Photo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Select Grid -->
+  <section id="materials" class="py-20 bg-gray-100">
+    <div class="mx-auto max-w-6xl px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8">What We Buy</h2>
+    </div>
+    <div class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 max-w-[1140px] mx-auto px-6">
+      <a href="#copper" class="group rounded-xl bg-white border border-brand-steel/10 shadow transition transform hover:-translate-y-1 p-6 flex flex-col items-center text-center">
+        <img src="assets/hero.jpg" alt="" class="w-40 h-40 object-cover rounded-lg border border-brand-steel/10 group-hover:scale-105 transition" />
+        <h3 class="font-semibold text-lg mt-4">Copper &amp; Brass</h3>
+        <p class="text-sm text-brand-steel">Highest copper prices in county</p>
+      </a>
+      <a href="#aluminum" class="group rounded-xl bg-white border border-brand-steel/10 shadow transition transform hover:-translate-y-1 p-6 flex flex-col items-center text-center">
+        <img src="assets/hero.jpg" alt="" class="w-40 h-40 object-cover rounded-lg border border-brand-steel/10 group-hover:scale-105 transition" />
+        <h3 class="font-semibold text-lg mt-4">Aluminum</h3>
+        <p class="text-sm text-brand-steel">Clean extrusion &amp; sheet</p>
+      </a>
+      <a href="#steel" class="group rounded-xl bg-white border border-brand-steel/10 shadow transition transform hover:-translate-y-1 p-6 flex flex-col items-center text-center">
+        <img src="assets/hero.jpg" alt="" class="w-40 h-40 object-cover rounded-lg border border-brand-steel/10 group-hover:scale-105 transition" />
+        <h3 class="font-semibold text-lg mt-4">Steel &amp; Iron</h3>
+        <p class="text-sm text-brand-steel">HMS &amp; prepared plate</p>
+      </a>
+      <a href="#stainless" class="group rounded-xl bg-white border border-brand-steel/10 shadow transition transform hover:-translate-y-1 p-6 flex flex-col items-center text-center">
+        <img src="assets/hero.jpg" alt="" class="w-40 h-40 object-cover rounded-lg border border-brand-steel/10 group-hover:scale-105 transition" />
+        <h3 class="font-semibold text-lg mt-4">Stainless Steel</h3>
+        <p class="text-sm text-brand-steel">304/316 solids</p>
+      </a>
+      <a href="#cats" class="group rounded-xl bg-white border border-brand-steel/10 shadow transition transform hover:-translate-y-1 p-6 flex flex-col items-center text-center">
+        <img src="assets/hero.jpg" alt="" class="w-40 h-40 object-cover rounded-lg border border-brand-steel/10 group-hover:scale-105 transition" />
+        <h3 class="font-semibold text-lg mt-4">Catalytic Converters</h3>
+        <p class="text-sm text-brand-steel">OEM &amp; DPF</p>
+      </a>
+      <a href="#escrap" class="group rounded-xl bg-white border border-brand-steel/10 shadow transition transform hover:-translate-y-1 p-6 flex flex-col items-center text-center">
+        <img src="assets/hero.jpg" alt="" class="w-40 h-40 object-cover rounded-lg border border-brand-steel/10 group-hover:scale-105 transition" />
+        <h3 class="font-semibold text-lg mt-4">E‑Scrap &amp; Batteries</h3>
+        <p class="text-sm text-brand-steel">Boards and lead‑acid</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Search Bar -->
+  <section class="py-8 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <input id="materialSearch" type="search" aria-label="Search materials" placeholder="Search a material" class="w-full border border-brand-steel/30 rounded-md p-3" />
+    </div>
+  </section>
+
+  <!-- Details Accordion -->
+  <section class="space-y-8 max-w-6xl mx-auto px-6" id="details">
+    <section id="copper" class="material-details">
+      <details>
+        <summary class="flex items-center justify-between p-4 bg-white border rounded-lg cursor-pointer">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-pipe text-2xl"></i>
+            <h2 class="text-lg font-bold">#1 Copper &amp; Brass</h2>
+          </span>
+          <svg class="arrow w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </summary>
+        <div class="details-body p-4 flex flex-col md:flex-row md:divide-x divide-gray-200">
+          <div class="flex-1 md:pr-6">
+            <h3 class="font-semibold mb-2">We pay top dollar for:</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>#1 Bright &amp; Shiny wire</li>
+              <li>Insulated copper cable</li>
+              <li>Yellow brass solids</li>
+            </ul>
           </div>
-          <h3 class="font-semibold">Copper &amp; Brass</h3>
-      </div>
-      <div class="rounded-xl bg-white border border-brand-steel/10 shadow transition transform hover:-translate-y-1 p-6 flex flex-col items-center text-center">
-        <div class="mb-3 rounded-lg overflow-hidden border border-brand-steel/10">
-          <img src="assets/hero.jpg" alt="Aluminum">
+          <div class="flex-1 md:pl-6 mt-6 md:mt-0">
+            <h3 class="font-semibold mb-2">We can&rsquo;t accept:</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Air-conditioning coils with freon</li>
+              <li>Greasy or food-contaminated copper</li>
+            </ul>
+          </div>
         </div>
-        <h3 class="font-semibold">Aluminum</h3>
-      </div>
-      <div class="rounded-xl bg-white border border-brand-steel/10 shadow transition transform hover:-translate-y-1 p-6 flex flex-col items-center text-center">
-        <div class="mb-3 rounded-lg overflow-hidden border border-brand-steel/10">
-          <img src="assets/hero.jpg" alt="Steel &amp; Iron">
-        </div>
-        <h3 class="font-semibold">Steel &amp; Iron</h3>
-      </div>
-      <div class="rounded-xl bg-white border border-brand-steel/10 shadow transition transform hover:-translate-y-1 p-6 flex flex-col items-center text-center">
-        <div class="mb-3 rounded-lg overflow-hidden border border-brand-steel/10">
-          <img src="assets/hero.jpg" alt="Stainless Steel">
-        </div>
-        <h3 class="font-semibold">Stainless Steel</h3>
-      </div>
-      <div class="rounded-xl bg-white border border-brand-steel/10 shadow transition transform hover:-translate-y-1 p-6 flex flex-col items-center text-center">
-        <div class="mb-3 rounded-lg overflow-hidden border border-brand-steel/10">
-          <img src="assets/hero.jpg" alt="Catalytic Converters">
-        </div>
-        <h3 class="font-semibold">Catalytic Converters</h3>
-      </div>
-      <div class="rounded-xl bg-white border border-brand-steel/10 shadow transition transform hover:-translate-y-1 p-6 flex flex-col items-center text-center">
-        <div class="mb-3 rounded-lg overflow-hidden border border-brand-steel/10">
-          <img src="assets/hero.jpg" alt="E-Scrap &amp; Batteries">
-        </div>
-        <h3 class="font-semibold">E-Scrap &amp; Batteries</h3>
-      </div>
-      </div>
+      </details>
     </section>
 
-    <section class="py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-8 text-center">Breakdown</h2>
-        <div class="overflow-x-auto">
-          <table class="min-w-full text-left border border-brand-steel/10">
-          <thead class="bg-gray-50">
-            <tr>
-              <th class="py-3 px-4 border-b border-brand-steel/10">Category</th>
-              <th class="py-3 px-4 border-b border-brand-steel/10">Examples we pay for</th>
-              <th class="py-3 px-4 border-b border-brand-steel/10">What we can&rsquo;t take</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="even:bg-gray-50">
-              <td class="py-2 px-4 font-semibold">Copper &amp; Brass</td>
-              <td class="py-2 px-4">#1/2 Bright, Bare, Insulated wire, Red &amp; Yellow brass, Radiators</td>
-              <td class="py-2 px-4">ACRs with freon, contaminated copper</td>
-            </tr>
-            <tr class="even:bg-gray-50">
-              <td class="py-2 px-4 font-semibold">Aluminum</td>
-              <td class="py-2 px-4">Sheet, Extrusion, Cast (wheels &amp; blocks), Painted siding, Cans</td>
-              <td class="py-2 px-4">Foil, food‑contaminated pans</td>
-            </tr>
-            <tr class="even:bg-gray-50">
-              <td class="py-2 px-4 font-semibold">Steel &amp; Iron</td>
-              <td class="py-2 px-4">HMS, Plate &amp; Structural, Cast iron machinery, Prepared/Unprepared</td>
-              <td class="py-2 px-4">Pressurized tanks, paint cans</td>
-            </tr>
-            <tr class="even:bg-gray-50">
-              <td class="py-2 px-4 font-semibold">Stainless</td>
-              <td class="py-2 px-4">304/316 solids, Turnings, Food‑grade tanks</td>
-              <td class="py-2 px-4">Greasy restaurant scrap</td>
-            </tr>
-            <tr class="even:bg-gray-50">
-              <td class="py-2 px-4 font-semibold">Catalytic Converters</td>
-              <td class="py-2 px-4">OEM, DPF, Foils</td>
-              <td class="py-2 px-4">Empty or punched shells</td>
-            </tr>
-            <tr class="even:bg-gray-50">
-              <td class="py-2 px-4 font-semibold">E‑Scrap &amp; Batteries</td>
-              <td class="py-2 px-4">Desktop / server boards, Cell phones, Lead‑acid &amp; Li‑ion packs</td>
-              <td class="py-2 px-4">CRT monitors, alkaline batteries</td>
-            </tr>
-          </tbody>
-        </table>
-          <p class="mt-4 text-sm text-brand-steel text-center">Not sure? Call dispatch or text photos for a quick thumbs‑up.</p>
-          <a href="contact.html" class="mt-8 block w-max mx-auto rounded-md bg-brand-orange px-8 py-3 font-semibold text-white shadow hover:opacity-90 transition">Request a Quote</a>
+    <section id="aluminum" class="material-details">
+      <details>
+        <summary class="flex items-center justify-between p-4 bg-white border rounded-lg cursor-pointer">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-circle text-2xl"></i>
+            <h2 class="text-lg font-bold">Aluminum</h2>
+          </span>
+          <svg class="arrow w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </summary>
+        <div class="details-body p-4 flex flex-col md:flex-row md:divide-x divide-gray-200">
+          <div class="flex-1 md:pr-6">
+            <h3 class="font-semibold mb-2">We pay top dollar for:</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Extrusion and sheet</li>
+              <li>Cast wheels and blocks</li>
+            </ul>
+          </div>
+          <div class="flex-1 md:pl-6 mt-6 md:mt-0">
+            <h3 class="font-semibold mb-2">We can&rsquo;t accept:</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Foil pans</li>
+              <li>Food-contaminated scrap</li>
+            </ul>
+          </div>
         </div>
-      </section>
+      </details>
+    </section>
+
+    <section id="steel" class="material-details">
+      <details>
+        <summary class="flex items-center justify-between p-4 bg-white border rounded-lg cursor-pointer">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-industry text-2xl"></i>
+            <h2 class="text-lg font-bold">Steel &amp; Iron</h2>
+          </span>
+          <svg class="arrow w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </summary>
+        <div class="details-body p-4 flex flex-col md:flex-row md:divide-x divide-gray-200">
+          <div class="flex-1 md:pr-6">
+            <h3 class="font-semibold mb-2">We pay top dollar for:</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>HMS and prepared plate</li>
+              <li>Cast iron machinery</li>
+            </ul>
+          </div>
+          <div class="flex-1 md:pl-6 mt-6 md:mt-0">
+            <h3 class="font-semibold mb-2">We can&rsquo;t accept:</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Pressurized tanks</li>
+              <li>Paint cans</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section id="stainless" class="material-details">
+      <details>
+        <summary class="flex items-center justify-between p-4 bg-white border rounded-lg cursor-pointer">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-utensils text-2xl"></i>
+            <h2 class="text-lg font-bold">Stainless Steel</h2>
+          </span>
+          <svg class="arrow w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </summary>
+        <div class="details-body p-4 flex flex-col md:flex-row md:divide-x divide-gray-200">
+          <div class="flex-1 md:pr-6">
+            <h3 class="font-semibold mb-2">We pay top dollar for:</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>304/316 solids</li>
+              <li>Food-grade tanks</li>
+            </ul>
+          </div>
+          <div class="flex-1 md:pl-6 mt-6 md:mt-0">
+            <h3 class="font-semibold mb-2">We can&rsquo;t accept:</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Greasy restaurant scrap</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section id="cats" class="material-details">
+      <details>
+        <summary class="flex items-center justify-between p-4 bg-white border rounded-lg cursor-pointer">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-car text-2xl"></i>
+            <h2 class="text-lg font-bold">Catalytic Converters</h2>
+          </span>
+          <svg class="arrow w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </summary>
+        <div class="details-body p-4 flex flex-col md:flex-row md:divide-x divide-gray-200">
+          <div class="flex-1 md:pr-6">
+            <h3 class="font-semibold mb-2">We pay top dollar for:</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>OEM units</li>
+              <li>DPF and foil cats</li>
+            </ul>
+          </div>
+          <div class="flex-1 md:pl-6 mt-6 md:mt-0">
+            <h3 class="font-semibold mb-2">We can&rsquo;t accept:</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Empty or punched shells</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section id="escrap" class="material-details">
+      <details>
+        <summary class="flex items-center justify-between p-4 bg-white border rounded-lg cursor-pointer">
+          <span class="flex items-center gap-3">
+            <i class="fa-solid fa-battery-full text-2xl"></i>
+            <h2 class="text-lg font-bold">E‑Scrap &amp; Batteries</h2>
+          </span>
+          <svg class="arrow w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </summary>
+        <div class="details-body p-4 flex flex-col md:flex-row md:divide-x divide-gray-200">
+          <div class="flex-1 md:pr-6">
+            <h3 class="font-semibold mb-2">We pay top dollar for:</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Server boards</li>
+              <li>Lead-acid &amp; Li‑ion packs</li>
+            </ul>
+          </div>
+          <div class="flex-1 md:pl-6 mt-6 md:mt-0">
+            <h3 class="font-semibold mb-2">We can&rsquo;t accept:</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>CRT monitors</li>
+              <li>Alkaline batteries</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </section>
+  </section>
+
+  <!-- Compliance Stripe -->
+  <section class="my-16 bg-[#FFFBE6] border-l-4 border-[#FFD500] py-14 px-6">
+    <p class="max-w-4xl mx-auto text-center">State law reminder: A valid photo ID is required for non‑ferrous sales. No fuel, oil, or refrigerants may remain in scrap items.</p>
+  </section>
 
   <!-- Scrapyard Sites CTA -->
   <section class="py-20 bg-gray-100 text-center">

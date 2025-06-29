@@ -221,3 +221,11 @@ header nav a:hover::after,
 .flip-back {
   transform: rotateY(180deg);
 }
+
+/* Materials accordion arrow animation */
+.material-details summary .arrow {
+  transition: transform 0.2s ease;
+}
+.material-details details[open] summary .arrow {
+  transform: rotate(90deg);
+}
