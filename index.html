@@ -166,15 +166,6 @@
   </div>
 </section>
 
-<section class="py-20 bg-brand-charcoal text-white text-center">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6">Need a roll-off tomorrow?</h2>
-    <div class="flex flex-col sm:flex-row justify-center gap-4">
-      <a href="contact.html" class="rounded-md bg-brand-orange px-8 py-3 font-semibold text-white shadow hover:opacity-90 transition">Book a Container</a>
-      <a href="tel:555123SCRAP" class="rounded-md bg-white px-8 py-3 font-semibold text-brand-orange shadow hover:bg-gray-100 transition">Call Dispatch</a>
-    </div>
-  </div>
-</section>
 
 <section class="stats-gradient py-20">
   <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-3 gap-10 text-center text-gray-900 font-extrabold">
@@ -190,6 +181,35 @@
       <p class="text-6xl mb-2"><span class="stat-number" data-target="100" data-suffix="%">100%</span></p>
       <p class="uppercase tracking-wide text-sm font-bold">Satisfaction Guarantee</p>
     </div>
+  </div>
+</section>
+
+<section class="py-20 bg-brand-charcoal text-white text-center">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">Need a roll-off tomorrow?</h2>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="contact.html" class="rounded-md bg-brand-orange px-8 py-3 font-semibold text-white shadow hover:opacity-90 transition">Book a Container</a>
+      <a href="tel:555123SCRAP" class="rounded-md bg-white px-8 py-3 font-semibold text-brand-orange shadow hover:bg-gray-100 transition">Call Dispatch</a>
+    </div>
+  </div>
+</section>
+
+<!-- Rating/Client Logos Band -->
+<section id="client-band" class="bg-brand-charcoal text-white py-4 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-6 text-sm">
+    <div class="flex items-center gap-2 whitespace-nowrap">
+      <span class="text-yellow-400">★★★★★</span>
+      <span class="font-semibold">4.8 Google rating</span>
+    </div>
+    <span class="hidden sm:inline-block border-l border-white/30 h-4"></span>
+    <div class="flex gap-4 flex-wrap justify-center items-center uppercase">
+      <span>City of Houston</span>
+      <span>XYZ Construction</span>
+      <span>Acme Manufacturing</span>
+      <span>MegaCorp</span>
+    </div>
+    <span class="hidden sm:inline-block border-l border-white/30 h-4"></span>
+    <div>As seen in <em>Recycling Today</em></div>
   </div>
 </section>
 
@@ -210,7 +230,7 @@
       </div>
       <div>
         <h3 class="font-semibold text-lg mb-2">Check Your Material</h3>
-        <p class="text-base md:text-sm text-brand-steel">We accept Copper &amp; Brass, Aluminum (sheet, cast &amp; cans), Steel &amp; Iron, Stainless Steel, Catalytic Converters, E-Scrap &amp; Batteries, and more! <br><br>Need the full list? Tap View All Materials to see every item we take—and the few we don’t (haz-mat, sealed tanks, liquids).</p>
+        <p class="text-base md:text-sm text-brand-steel">We accept Copper &amp; Brass, Aluminum (sheet, cast &amp; cans), Steel &amp; Iron, Stainless Steel, Catalytic Converters, E-Scrap &amp; Batteries, and more! <br><br>Need the full list? Tap <a href="assets/accepted-materials.pdf" class="animated-link font-bold" target="_blank">View All Materials</a> to see every item we take—and the few we don’t (haz-mat, sealed tanks, liquids).</p>
       </div>
     </div>
 
@@ -223,7 +243,7 @@
       </div>
       <div>
         <h3 class="font-semibold text-lg mb-2">Drive On &amp; Unload</h3>
-        <p class="text-base md:text-sm text-brand-steel">Roll onto our calibrated truck scale, grab a yard pass, and follow the clearly-marked lanes. Our crew will grade, sort, and unload for you—so you’re back on the road fast. <br><br>First time here? Tap <a href="https://maps.google.com" class="underline">here for Google Maps</a> directions or call us at xxx.xxx.xxxx to get more info.</p>
+        <p class="text-base md:text-sm text-brand-steel">Roll onto our calibrated truck scale, grab a yard pass, and follow the clearly-marked lanes. Our crew will grade, sort, and unload for you—so you’re back on the road fast. <br><br>First time here? Tap <a href="https://maps.google.com" target="_blank" class="animated-link font-bold">Google Maps</a> directions or call us at xxx.xxx.xxxx to get more info.</p>
       </div>
     </div>
 
@@ -244,14 +264,6 @@
     </div>
   </div>
 
-      <div class="max-w-3xl mx-auto mt-12 text-brand-steel">
-        <p class="font-semibold mb-2">Quick notes</p>
-        <ul class="list-disc pl-5 mb-6 text-base md:text-sm space-y-1">
-          <li>Photo ID required for state compliance.</li>
-          <li>Prices update throughout the day with market swings—check before you haul.</li>
-        </ul>
-        <p class="text-base md:text-sm">Still have questions? Hit the chat bubble or call dispatch at (555) 123-SCRAP—we’ll get you sorted.</p>
-      </div>
   </div>
 </section>
 
@@ -263,59 +275,41 @@
 
   <div class="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto px-6">
     <div class="rounded-xl bg-white border border-brand-steel/10 shadow-sm p-6 flex flex-col items-center text-center">
-      <div class="text-brand-orange text-4xl mb-3">
-        <i class="fa-solid fa-coins"></i>
+      <div class="mb-3 rounded-lg overflow-hidden border border-brand-steel/10">
+        <img src="assets/materials/copper.jpg" alt="Copper &amp; Brass">
       </div>
       <h3 class="font-semibold">Copper &amp; Brass</h3>
     </div>
     <div class="rounded-xl bg-white border border-brand-steel/10 shadow-sm p-6 flex flex-col items-center text-center">
-      <div class="text-brand-orange text-4xl mb-3">
-        <i class="fa-solid fa-bolt"></i>
+      <div class="mb-3 rounded-lg overflow-hidden border border-brand-steel/10">
+        <img src="assets/materials/aluminum.jpg" alt="Aluminum">
       </div>
       <h3 class="font-semibold">Aluminum</h3>
     </div>
     <div class="rounded-xl bg-white border border-brand-steel/10 shadow-sm p-6 flex flex-col items-center text-center">
-      <div class="text-brand-orange text-4xl mb-3">
-        <i class="fa-solid fa-industry"></i>
+      <div class="mb-3 rounded-lg overflow-hidden border border-brand-steel/10">
+        <img src="assets/materials/steel.jpg" alt="Steel &amp; Iron">
       </div>
       <h3 class="font-semibold">Steel &amp; Iron</h3>
     </div>
     <div class="rounded-xl bg-white border border-brand-steel/10 shadow-sm p-6 flex flex-col items-center text-center">
-      <div class="text-brand-orange text-4xl mb-3">
-        <i class="fa-solid fa-gears"></i>
+      <div class="mb-3 rounded-lg overflow-hidden border border-brand-steel/10">
+        <img src="assets/materials/stainless.jpg" alt="Stainless Steel">
       </div>
       <h3 class="font-semibold">Stainless Steel</h3>
     </div>
     <div class="rounded-xl bg-white border border-brand-steel/10 shadow-sm p-6 flex flex-col items-center text-center">
-      <div class="text-brand-orange text-4xl mb-3">
-        <i class="fa-solid fa-car"></i>
+      <div class="mb-3 rounded-lg overflow-hidden border border-brand-steel/10">
+        <img src="assets/materials/catalytic.jpg" alt="Catalytic Converters">
       </div>
       <h3 class="font-semibold">Catalytic Converters</h3>
     </div>
     <div class="rounded-xl bg-white border border-brand-steel/10 shadow-sm p-6 flex flex-col items-center text-center">
-      <div class="text-brand-orange text-4xl mb-3">
-        <i class="fa-solid fa-battery-full"></i>
+      <div class="mb-3 rounded-lg overflow-hidden border border-brand-steel/10">
+        <img src="assets/materials/batteries.jpg" alt="E-Scrap &amp; Batteries">
       </div>
       <h3 class="font-semibold">E-Scrap &amp; Batteries</h3>
     </div>
-<!-- Rating/Client Logos Band -->
-<section id="client-band" class="bg-brand-charcoal text-white py-4 relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-6 text-sm">
-    <div class="flex items-center gap-2 whitespace-nowrap">
-      <span class="text-yellow-400">★★★★★</span>
-      <span class="font-semibold">4.8 Google rating</span>
-    </div>
-    <span class="hidden sm:inline-block border-l border-white/30 h-4"></span>
-    <div class="flex gap-4 flex-wrap justify-center items-center uppercase">
-      <span>City of Houston</span>
-      <span>XYZ Construction</span>
-      <span>Acme Manufacturing</span>
-      <span>MegaCorp</span>
-    </div>
-    <span class="hidden sm:inline-block border-l border-white/30 h-4"></span>
-    <div>As seen in <em>Recycling Today</em></div>
-  </div>
-</section>
 
 <section class="py-20 bg-gray-700">
   <div class="max-w-4xl mx-auto text-center">
