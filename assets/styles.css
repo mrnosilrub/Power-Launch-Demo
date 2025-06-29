@@ -128,6 +128,14 @@ header nav a.text-yellow-400:hover {
   transform: scaleX(1);
 }
 
+/* Hovering over the entire home button also triggers the underline */
+#homeButton:hover .animated-link::after {
+  transform: scaleX(1);
+}
+#homeButton:hover .animated-link {
+  color: currentColor !important;
+}
+
 header nav a::after,
 #mobileMenu a:not(.bg-yellow-500)::after {
   content: '';
