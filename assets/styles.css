@@ -164,6 +164,15 @@ header nav a:hover::after,
   width: 100%;
 }
 
+/* Remove underline animations on narrow screens */
+@media (max-width: 767px) {
+  header nav a::after,
+  #mobileMenu a:not(.bg-yellow-500)::after,
+  .animated-link::after {
+    display: none;
+  }
+}
+
 /* Animated background for the stats section */
 .stats-gradient {
   background: linear-gradient(-45deg, #D75E02, #FFA726, #FF6A00, #D75E02);
