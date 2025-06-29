@@ -197,9 +197,14 @@ header nav a:hover::after,
 }
 
 /* Flip card utility for service grid */
-.flip-card { perspective: 1000px; }
+.flip-card {
+  perspective: 1000px;
+  overflow: hidden;
+}
 .flip-card-inner {
   position: relative;
+  width: 100%;
+  height: 100%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
@@ -211,6 +216,8 @@ header nav a:hover::after,
 .flip-back {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
@@ -220,6 +227,29 @@ header nav a:hover::after,
 }
 .flip-back {
   transform: rotateY(180deg);
+}
+
+/* Slick carousel dots */
+.slick-dots {
+  display: flex !important;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  list-style: none;
+}
+.slick-dots li {
+  margin: 0;
+}
+.slick-dots button {
+  font-size: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-cards);
+  border: none;
+}
+.slick-dots li.slick-active button {
+  background-color: var(--color-links);
 }
 
 /* Materials accordion arrow animation */
