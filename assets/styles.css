@@ -156,3 +156,8 @@ header nav a:hover::after,
   100% { background-position: 0% 50%; }
 
 }
+
+/* Contrasted banner for the bottom call to action */
+.cta-banner {
+  background: linear-gradient(90deg, var(--color-links), var(--color-success));
+}
