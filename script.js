@@ -200,6 +200,26 @@ function initVideoModal() {
   }
 }
 
+function initMaterialCards() {
+  const cards = document.querySelectorAll('#materials a[href^="#"]');
+  if (!cards.length) return;
+  cards.forEach(card => {
+    card.addEventListener('click', e => {
+      e.preventDefault();
+      const id = card.getAttribute('href').substring(1);
+      const section = document.getElementById(id);
+      if (!section) return;
+      const details = section.querySelector('details');
+      if (details) details.open = true;
+      const header = document.querySelector('header');
+      const offset = header ? header.offsetHeight : 0;
+      const top = section.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+      history.pushState(null, '', '#' + id);
+    });
+  });
+}
+
 function initQuoteBar() {
   const bar = document.getElementById('quoteBar');
   if (!bar) return;
@@ -260,6 +280,8 @@ function initPage() {
   initTeamFlip();
   initVideoModal();
   initQuoteBar();
+
+  initMaterialCards();
 
   initTeamCarousel();
 
