@@ -165,6 +165,10 @@ function initMaterialSearch() {
   });
 }
 
+    // Close the input event handler and the initMaterialSearch function
+  });
+}
+
 function initTimeline() {
   const steps = document.querySelectorAll('.timeline-step');
   const line = document.querySelector('.timeline-line');
