@@ -222,6 +222,12 @@ header nav a:hover::after,
   transform: rotateY(180deg);
 }
 
+/* Materials accordion arrow animation */
+.material-details summary .arrow {
+  transition: transform 0.2s ease;
+}
+.material-details details[open] summary .arrow {
+  transform: rotate(90deg);
 /* Process page utilities */
 .process-tip {
   background-color: #FFFBE6;

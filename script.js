@@ -147,6 +147,22 @@ function initYardMap() {
   });
 }
 
+
+function initMaterialSearch() {
+  const input = document.getElementById('materialSearch');
+  if (!input) return;
+  input.addEventListener('input', () => {
+    const term = input.value.trim().toLowerCase();
+    const sections = document.querySelectorAll('.material-details');
+    sections.forEach(sec => {
+      const text = sec.textContent.toLowerCase();
+      if (text.includes(term)) {
+        sec.classList.remove('hidden');
+      } else {
+        sec.classList.add('hidden');
+      }
+    });
+
 function initTimeline() {
   const steps = document.querySelectorAll('.timeline-step');
   const line = document.querySelector('.timeline-line');
@@ -164,6 +180,7 @@ function initTimeline() {
     step.addEventListener('mouseleave', hide);
     step.addEventListener('focus', show);
     step.addEventListener('blur', hide);
+
   });
 }
 
@@ -171,7 +188,11 @@ function initPage() {
   initMenu();
   initFlyOver();
   initYardMap();
+
+  initMaterialSearch();
+
   initTimeline();
+
 }
 
 if (document.readyState === 'loading') {
