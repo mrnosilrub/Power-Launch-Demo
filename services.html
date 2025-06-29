@@ -16,7 +16,8 @@
           brand: {
             orange: '#D75E02',
             steel:  '#5E6367',
-            charcoal: '#2B2B2B'
+            charcoal: '#2B2B2B',
+            teal: '#004840'
           }
         }
       }
@@ -26,6 +27,7 @@
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 <link rel="stylesheet" href="assets/styles.css">
 <meta name="description" content="Discover Demo Yard's comprehensive services including container rental and demolition.">
 <meta property="og:title" content="Services | Demo Yard">
@@ -97,17 +99,89 @@
 <main class="flex-grow">
 
 <!-- Hero -->
-<section id="top" class="scroll-mt-16 pt-16 relative isolate min-h-[70vh] flex flex-col items-center justify-center text-center text-white" data-aos="fade-up">
-  <div class="absolute inset-0 -z-10 bg-[url('assets/hero.jpg')] bg-cover bg-center brightness-[.55]"></div>
-  <div class="absolute inset-0 -z-10 bg-black/70"></div>
-  <h1 class="text-4xl md:text-5xl font-extrabold z-10">Five Ways We Turn Scrap Into Cash.</h1>
-  <p class="mt-4 text-lg z-10">Choose the option that fits your haul, schedule, and job-site.</p>
-  <div class="mt-8 flex flex-col sm:flex-row gap-4 z-10">
-    <a href="#buying" class="rounded-md bg-white/10 px-6 py-3 font-semibold transition hover:opacity-90 hover:bg-white/20">Walk-In Buying</a>
-    <a href="#containers" class="rounded-md bg-white/10 px-6 py-3 font-semibold transition hover:opacity-90 hover:bg-white/20">Roll-Offs</a>
-    <a href="#demo" class="rounded-md bg-white/10 px-6 py-3 font-semibold transition hover:opacity-90 hover:bg-white/20">Demolition</a>
-    <a href="#converters" class="rounded-md bg-white/10 px-6 py-3 font-semibold transition hover:opacity-90 hover:bg-white/20">Converters</a>
-    <a href="#escrap" class="rounded-md bg-white/10 px-6 py-3 font-semibold transition hover:opacity-90 hover:bg-white/20">E-Scrap</a>
+<section id="top" class="scroll-mt-16 relative isolate flex items-center justify-center text-center text-white min-h-[60vh] md:min-h-screen" data-aos="fade-up">
+  <div class="absolute inset-0 -z-10">
+    <img src="assets/hero.jpg" alt="" class="w-full h-full object-cover blur-[15px]">
+    <div class="absolute inset-0 bg-brand-teal/75"></div>
+  </div>
+  <div class="flex flex-col items-center justify-center w-full h-full px-6">
+    <h1 class="text-[7vw] md:text-6xl font-extrabold">Five Ways We Turn Scrap Into Cash.</h1>
+    <p class="mt-4 text-lg md:text-xl">Choose the option that fits your haul, schedule, and job-site.</p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+      <a href="contact.html" class="rounded-md bg-brand-orange px-8 py-3 font-semibold shadow hover:opacity-90 transition">Request a Quote</a>
+      <a href="pricing.html" class="rounded-md border border-white px-8 py-3 font-semibold shadow hover:bg-white/10 transition">Get Today's Prices</a>
+    </div>
+  </div>
+</section>
+
+<!-- At-a-Glance Services Grid -->
+<section id="glance" class="py-16">
+  <div class="mx-auto max-w-[1240px] px-6 grid gap-6 sm:grid-cols-2 md:grid-cols-5 text-center">
+    <!-- Card 1 -->
+    <div class="flip-card bg-white rounded-lg shadow transition-transform hover:-translate-y-1">
+      <div class="flip-card-inner h-40">
+        <div class="flip-front">
+          <img src="assets/truck.svg" alt="Walk-In" class="w-16 h-16 mb-2">
+          <h3 class="font-semibold">Walk‑In</h3>
+          <p class="text-sm text-brand-steel">Fast cash</p>
+        </div>
+        <div class="flip-back bg-white rounded-lg">
+          <p class="text-sm text-brand-charcoal">Drive on, unload, and get paid in minutes.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="flip-card bg-white rounded-lg shadow transition-transform hover:-translate-y-1">
+      <div class="flip-card-inner h-40">
+        <div class="flip-front">
+          <img src="assets/yard-map.svg" alt="Roll-Offs" class="w-16 h-16 mb-2">
+          <h3 class="font-semibold">Roll‑Offs</h3>
+          <p class="text-sm text-brand-steel">Boxes on demand</p>
+        </div>
+        <div class="flip-back bg-white rounded-lg">
+          <p class="text-sm text-brand-charcoal">20‑40 yd bins swapped on your schedule.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="flip-card bg-white rounded-lg shadow transition-transform hover:-translate-y-1">
+      <div class="flip-card-inner h-40">
+        <div class="flip-front">
+          <img src="assets/clipboard-document-list.svg" alt="Demolition" class="w-16 h-16 mb-2">
+          <h3 class="font-semibold">Demolition</h3>
+          <p class="text-sm text-brand-steel">Turn-key crews</p>
+        </div>
+        <div class="flip-back bg-white rounded-lg">
+          <p class="text-sm text-brand-charcoal">Licensed teams dismantle and haul away.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="flip-card bg-white rounded-lg shadow transition-transform hover:-translate-y-1">
+      <div class="flip-card-inner h-40">
+        <div class="flip-front">
+          <img src="assets/banknotes.svg" alt="Converters" class="w-16 h-16 mb-2">
+          <h3 class="font-semibold">Converters</h3>
+          <p class="text-sm text-brand-steel">Top payouts</p>
+        </div>
+        <div class="flip-back bg-white rounded-lg">
+          <p class="text-sm text-brand-charcoal">On‑the‑spot grading and assay options.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="flip-card bg-white rounded-lg shadow transition-transform hover:-translate-y-1">
+      <div class="flip-card-inner h-40">
+        <div class="flip-front">
+          <img src="assets/logo.svg" alt="E‑Scrap" class="w-16 h-16 mb-2">
+          <h3 class="font-semibold">E‑Scrap</h3>
+          <p class="text-sm text-brand-steel">Secure recycling</p>
+        </div>
+        <div class="flip-back bg-white rounded-lg">
+          <p class="text-sm text-brand-charcoal">Certified data destruction and battery handling.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -118,6 +192,38 @@
       <div>
         <h2 class="text-3xl font-bold mb-4">Walk‑In Scrap Buying</h2>
         <p class="text-brand-steel">Bring your loose metal, pull onto our certified scale, and get a printed weight ticket in under ten minutes. Our yard crew will sort, grade, and unload for you—so you’re back on the road fast with cash, ACH, or check in hand.</p>
+        <ul class="mt-4 list-disc list-inside space-y-2 text-brand-steel text-sm">
+          <li>Drive-through lanes for trucks and trailers</li>
+          <li>Sorting and unloading assistance</li>
+          <li>Instant payment options</li>
+        </ul>
+        <div class="mt-6">
+          <a href="contact.html" class="inline-block rounded-md bg-brand-orange px-6 py-3 font-semibold text-white shadow hover:opacity-90 transition">Talk to Logistics</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-Sell / Social Proof Stripe -->
+  <section class="py-12 bg-[#fafafa]">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-center text-lg font-medium mb-8">Not ready to visit the scale? See how Demolition Co. saved $42&nbsp;k in disposal fees after switching to our roll-off program.</p>
+      <div class="review-carousel">
+        <div class="p-6 bg-white rounded-lg shadow text-center">
+          <img src="assets/logo.svg" alt="Demo Logo" class="h-8 mx-auto mb-3">
+          <p class="text-sm text-brand-steel mb-2">“Great service and honest weights every time.”</p>
+          <a href="#" class="text-brand-orange text-sm underline">Google Review</a>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow text-center">
+          <img src="assets/logo.svg" alt="Demo Logo" class="h-8 mx-auto mb-3">
+          <p class="text-sm text-brand-steel mb-2">“Their roll-off program cut our dump fees in half.”</p>
+          <a href="#" class="text-brand-orange text-sm underline">Google Review</a>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow text-center">
+          <img src="assets/logo.svg" alt="Demo Logo" class="h-8 mx-auto mb-3">
+          <p class="text-sm text-brand-steel mb-2">“Reliable drivers and quick turnaround.”</p>
+          <a href="#" class="text-brand-orange text-sm underline">Google Review</a>
+        </div>
       </div>
     </div>
   </section>
@@ -127,6 +233,14 @@
       <div class="order-2 md:order-1">
         <h2 class="text-3xl font-bold mb-4">Roll‑Off Container Program</h2>
         <p class="text-brand-steel">Running a manufacturing line, demo job, or clean‑out? We stage 20‑, 30‑, and 40‑yard boxes at your site, swap them on a schedule you set, and send detailed weight reports with every pickup. No hidden fees—just honest tonnage rates.</p>
+        <ul class="mt-4 list-disc list-inside space-y-2 text-brand-steel text-sm">
+          <li>20–40 yd<sup>3</sup> containers</li>
+          <li>GPS-tracked drivers</li>
+          <li>Email tonnage report on pickup</li>
+        </ul>
+        <div class="mt-6">
+          <a href="contact.html" class="inline-block rounded-md bg-brand-orange px-6 py-3 font-semibold text-white shadow hover:opacity-90 transition">Book a Walk‑Through</a>
+        </div>
       </div>
       <img src="assets/hero.jpg" alt="Roll-Off Container Program" class="rounded-lg order-1 md:order-2">
     </div>
@@ -138,6 +252,14 @@
       <div>
         <h2 class="text-3xl font-bold mb-4">On‑Site Demolition &amp; Clean‑Up</h2>
         <p class="text-brand-steel">Licensed, insured crews with shears, torches, and loaders can dismantle tanks, silos, or entire facilities. We handle the permits, environmental paperwork, and trucking, and we credit the value of the recovered metal against your demo cost.</p>
+        <ul class="mt-4 list-disc list-inside space-y-2 text-brand-steel text-sm">
+          <li>Full-service tear-down</li>
+          <li>Safety and permit compliance</li>
+          <li>Metal value offset</li>
+        </ul>
+        <div class="mt-6">
+          <a href="contact.html" class="inline-block rounded-md bg-brand-orange px-6 py-3 font-semibold text-white shadow hover:opacity-90 transition">Talk to Logistics</a>
+        </div>
       </div>
     </div>
   </section>
@@ -147,6 +269,14 @@
       <div class="order-2 md:order-1">
         <h2 class="text-3xl font-bold mb-4">Catalytic Converter Recycling</h2>
         <p class="text-brand-steel">We accurately identify OEM, aftermarket, and DPF units with an industry database and pay on the spot. For high volumes we offer assay‑based settlements with transparent sampling procedures.</p>
+        <ul class="mt-4 list-disc list-inside space-y-2 text-brand-steel text-sm">
+          <li>OEM and aftermarket grading</li>
+          <li>Assay-based payouts</li>
+          <li>Secure chain of custody</li>
+        </ul>
+        <div class="mt-6">
+          <a href="contact.html" class="inline-block rounded-md bg-brand-orange px-6 py-3 font-semibold text-white shadow hover:opacity-90 transition">Talk to Logistics</a>
+        </div>
       </div>
       <img src="assets/hero.jpg" alt="Catalytic Converter Recycling" class="rounded-lg order-1 md:order-2">
     </div>
@@ -158,18 +288,31 @@
       <div>
         <h2 class="text-3xl font-bold mb-4">E‑Scrap &amp; Battery Solutions</h2>
         <p class="text-brand-steel">Secure downstreams for servers, telecom hardware, lithium‑ion, and lead‑acid batteries. Certificates of recycling and data‑destruction available upon request.</p>
+        <ul class="mt-4 list-disc list-inside space-y-2 text-brand-steel text-sm">
+          <li>Server and telecom recycling</li>
+          <li>Lead &amp; lithium battery handling</li>
+          <li>Certificates upon request</li>
+        </ul>
+        <div class="mt-6">
+          <a href="contact.html" class="inline-block rounded-md bg-brand-orange px-6 py-3 font-semibold text-white shadow hover:opacity-90 transition">Talk to Logistics</a>
+        </div>
       </div>
     </div>
   </section>
 
 
-  <!-- Scrapyard Sites CTA -->
-  <section class="py-20 bg-gray-100 text-center">
-    <div class="max-w-3xl mx-auto px-6">
-      <p class="text-xl mb-6">If this digital experience matches the service you want on the scale deck, let’s launch yours next.</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="contact.html" class="rounded-md bg-brand-orange px-8 py-3 font-semibold text-white shadow hover:opacity-90 transition">Book a Demo</a>
-        <a href="https://scrapyardsites.com" target="_blank" rel="noopener" class="rounded-md bg-white px-8 py-3 font-semibold text-brand-orange shadow hover:bg-gray-100 transition">Visit ScrapyardSites.com</a>
+  <!-- "Launch Yours Next" Closing Panel -->
+  <section class="py-20">
+    <div class="grid md:grid-cols-2">
+      <div class="h-56 md:h-auto bg-[url('assets/hero.jpg')] bg-cover bg-center"></div>
+      <div class="bg-brand-teal text-white flex flex-col justify-center p-10 space-y-4">
+        <h2 class="text-3xl font-bold">Ready to Turn Scrap Into Profit?</h2>
+        <ul class="list-disc list-inside space-y-2 text-sm">
+          <li>Custom scrap-yard websites</li>
+          <li>Built-in SEO copywriting</li>
+          <li>Update prices in minutes</li>
+        </ul>
+        <a href="contact.html" class="w-max rounded-md bg-white text-brand-teal px-6 py-3 font-semibold shadow hover:opacity-90 transition">Book a Demo</a>
       </div>
     </div>
   </section>
@@ -186,6 +329,13 @@
 <script>
   /* dynamic year for footer */
   document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+  if (window.jQuery && document.querySelector('.review-carousel')) {
+    $('.review-carousel').slick({ dots: true, arrows: false });
+  }
 </script>
 <script src="script.js"></script>
 </body>
