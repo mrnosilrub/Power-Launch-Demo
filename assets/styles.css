@@ -95,6 +95,10 @@ header {
   z-index: 50;
 }
 
+#mobileMenu {
+  color: var(--color-headlines) !important;
+}
+
 /* Nav bar underline animation */
 header nav a,
 #mobileMenu a:not(.bg-yellow-500) {
