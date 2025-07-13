@@ -25,6 +25,12 @@ The project stores all images, style sheets and scripts in the `assets/` folder.
 - `assets/logo.svg`
 - `assets/truck.svg`
 - `assets/yard-map.svg`
+- `assets/team-alex.jpg`
+- `assets/team-jamie.jpg`
+- `assets/team-riley.jpg`
+- `assets/team-victoria.jpg`
+- `assets/team-sam.jpg`
+- `assets/team-morgan.jpg`
 
 Other referenced assets include:
 
