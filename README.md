@@ -6,37 +6,39 @@ All styles and behavior are implemented with Tailwind CSS and small JavaScript h
 
 ## Assets
 
-The project stores all images, style sheets and scripts in the `assets/` folder. All image files available in the folder are listed below with their full paths:
+The project stores its images, style sheets and scripts in the `assets/` folder. The following files are referenced across the HTML pages:
 
-- `assets/banknotes.svg`
-- `assets/clipboard-document-list.svg`
-- `assets/hero.jpg`
-- `assets/rolloff.jpg`
+- `assets/about-hero.jpg`
+- `assets/about-photo1.jpg`
+- `assets/about-photo2.jpg`
+- `assets/about-photo3.jpg`
+- `assets/about-photo4.jpg`
+- `assets/about-photo5.jpg`
+- `assets/aluminum.jpg`
+- `assets/batteries.jpg`
 - `assets/bin20.jpg`
 - `assets/bin30.jpg`
 - `assets/bin60.jpg`
-- `assets/copper.jpg`
-- `assets/aluminum.jpg`
-- `assets/steel.jpg`
-- `assets/stainless.jpg`
+- `assets/buying.jpg`
 - `assets/catalytic.jpg`
-- `assets/batteries.jpg`
+- `assets/containers.jpg`
+- `assets/converters.jpg`
+- `assets/copper.jpg`
+- `assets/demolition.jpg`
+- `assets/escrap.jpg`
+- `assets/hero.jpg`
+- `assets/jquery-3.6.0.min.js`
 - `assets/logo.png`
 - `assets/logo.svg`
-- `assets/truck.svg`
-- `assets/yard-map.svg`
-
-- `assets/team-alex.jpg`
-- `assets/team-jamie.jpg`
-- `assets/team-riley.jpg`
-- `assets/team-victoria.jpg`
-- `assets/team-sam.jpg`
-- `assets/team-morgan.jpg`
-
-
-Other referenced assets include:
-
-- `assets/jquery-3.6.0.min.js`
+- `assets/rolloff.jpg`
 - `assets/slick.min.css`
 - `assets/slick.min.js`
+- `assets/stainless.jpg`
+- `assets/steel.jpg`
 - `assets/styles.css`
+- `assets/team-alex.jpg`
+- `assets/team-jamie.jpg`
+- `assets/team-morgan.jpg`
+- `assets/team-riley.jpg`
+- `assets/team-sam.jpg`
+- `assets/team-victoria.jpg`
